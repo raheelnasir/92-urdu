@@ -1,0 +1,122 @@
+C:\Users\abdul\Desktop\My DotNet\Rekhta\View\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\abdul\Desktop\My DotNet\Rekhta\View\bin\Debug\net7.0\appsettings.json
+C:\Users\abdul\Desktop\My DotNet\Rekhta\View\bin\Debug\net7.0\View.staticwebassets.runtime.json
+C:\Users\abdul\Desktop\My DotNet\Rekhta\View\bin\Debug\net7.0\View.exe
+C:\Users\abdul\Desktop\My DotNet\Rekhta\View\bin\Debug\net7.0\View.deps.json
+C:\Users\abdul\Desktop\My DotNet\Rekhta\View\bin\Debug\net7.0\View.runtimeconfig.json
+C:\Users\abdul\Desktop\My DotNet\Rekhta\View\bin\Debug\net7.0\View.dll
+C:\Users\abdul\Desktop\My DotNet\Rekhta\View\bin\Debug\net7.0\View.pdb
+C:\Users\abdul\Desktop\My DotNet\Rekhta\View\obj\Debug\net7.0\View.csproj.AssemblyReference.cache
+C:\Users\abdul\Desktop\My DotNet\Rekhta\View\obj\Debug\net7.0\View.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\abdul\Desktop\My DotNet\Rekhta\View\obj\Debug\net7.0\View.AssemblyInfoInputs.cache
+C:\Users\abdul\Desktop\My DotNet\Rekhta\View\obj\Debug\net7.0\View.AssemblyInfo.cs
+C:\Users\abdul\Desktop\My DotNet\Rekhta\View\obj\Debug\net7.0\View.csproj.CoreCompileInputs.cache
+C:\Users\abdul\Desktop\My DotNet\Rekhta\View\obj\Debug\net7.0\View.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\abdul\Desktop\My DotNet\Rekhta\View\obj\Debug\net7.0\View.RazorAssemblyInfo.cache
+C:\Users\abdul\Desktop\My DotNet\Rekhta\View\obj\Debug\net7.0\View.RazorAssemblyInfo.cs
+C:\Users\abdul\Desktop\My DotNet\Rekhta\View\obj\Debug\net7.0\staticwebassets\msbuild.View.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\abdul\Desktop\My DotNet\Rekhta\View\obj\Debug\net7.0\staticwebassets\msbuild.build.View.props
+C:\Users\abdul\Desktop\My DotNet\Rekhta\View\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.View.props
+C:\Users\abdul\Desktop\My DotNet\Rekhta\View\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.View.props
+C:\Users\abdul\Desktop\My DotNet\Rekhta\View\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\abdul\Desktop\My DotNet\Rekhta\View\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\abdul\Desktop\My DotNet\Rekhta\View\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\abdul\Desktop\My DotNet\Rekhta\View\obj\Debug\net7.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
+C:\Users\abdul\Desktop\My DotNet\Rekhta\View\obj\Debug\net7.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
+C:\Users\abdul\Desktop\My DotNet\Rekhta\View\obj\Debug\net7.0\scopedcss\bundle\View.styles.css
+C:\Users\abdul\Desktop\My DotNet\Rekhta\View\obj\Debug\net7.0\scopedcss\projectbundle\View.bundle.scp.css
+C:\Users\abdul\Desktop\My DotNet\Rekhta\View\obj\Debug\net7.0\View.dll
+C:\Users\abdul\Desktop\My DotNet\Rekhta\View\obj\Debug\net7.0\refint\View.dll
+C:\Users\abdul\Desktop\My DotNet\Rekhta\View\obj\Debug\net7.0\View.pdb
+C:\Users\abdul\Desktop\My DotNet\Rekhta\View\obj\Debug\net7.0\View.genruntimeconfig.cache
+C:\Users\abdul\Desktop\My DotNet\Rekhta\View\obj\Debug\net7.0\ref\View.dll
+C:\Users\Rearms\Downloads\Rekhta\View\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\Rearms\Downloads\Rekhta\View\bin\Debug\net7.0\appsettings.json
+C:\Users\Rearms\Downloads\Rekhta\View\bin\Debug\net7.0\View.staticwebassets.runtime.json
+C:\Users\Rearms\Downloads\Rekhta\View\bin\Debug\net7.0\View.exe
+C:\Users\Rearms\Downloads\Rekhta\View\bin\Debug\net7.0\View.deps.json
+C:\Users\Rearms\Downloads\Rekhta\View\bin\Debug\net7.0\View.runtimeconfig.json
+C:\Users\Rearms\Downloads\Rekhta\View\bin\Debug\net7.0\View.dll
+C:\Users\Rearms\Downloads\Rekhta\View\bin\Debug\net7.0\View.pdb
+C:\Users\Rearms\Downloads\Rekhta\View\obj\Debug\net7.0\View.csproj.AssemblyReference.cache
+C:\Users\Rearms\Downloads\Rekhta\View\obj\Debug\net7.0\View.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rearms\Downloads\Rekhta\View\obj\Debug\net7.0\View.AssemblyInfoInputs.cache
+C:\Users\Rearms\Downloads\Rekhta\View\obj\Debug\net7.0\View.AssemblyInfo.cs
+C:\Users\Rearms\Downloads\Rekhta\View\obj\Debug\net7.0\View.csproj.CoreCompileInputs.cache
+C:\Users\Rearms\Downloads\Rekhta\View\obj\Debug\net7.0\View.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Rearms\Downloads\Rekhta\View\obj\Debug\net7.0\View.RazorAssemblyInfo.cache
+C:\Users\Rearms\Downloads\Rekhta\View\obj\Debug\net7.0\View.RazorAssemblyInfo.cs
+C:\Users\Rearms\Downloads\Rekhta\View\obj\Debug\net7.0\staticwebassets\msbuild.View.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Rearms\Downloads\Rekhta\View\obj\Debug\net7.0\staticwebassets\msbuild.build.View.props
+C:\Users\Rearms\Downloads\Rekhta\View\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.View.props
+C:\Users\Rearms\Downloads\Rekhta\View\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.View.props
+C:\Users\Rearms\Downloads\Rekhta\View\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\Rearms\Downloads\Rekhta\View\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\Rearms\Downloads\Rekhta\View\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\Rearms\Downloads\Rekhta\View\obj\Debug\net7.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
+C:\Users\Rearms\Downloads\Rekhta\View\obj\Debug\net7.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
+C:\Users\Rearms\Downloads\Rekhta\View\obj\Debug\net7.0\scopedcss\bundle\View.styles.css
+C:\Users\Rearms\Downloads\Rekhta\View\obj\Debug\net7.0\scopedcss\projectbundle\View.bundle.scp.css
+C:\Users\Rearms\Downloads\Rekhta\View\obj\Debug\net7.0\View.dll
+C:\Users\Rearms\Downloads\Rekhta\View\obj\Debug\net7.0\refint\View.dll
+C:\Users\Rearms\Downloads\Rekhta\View\obj\Debug\net7.0\View.pdb
+C:\Users\Rearms\Downloads\Rekhta\View\obj\Debug\net7.0\View.genruntimeconfig.cache
+C:\Users\Rearms\Downloads\Rekhta\View\obj\Debug\net7.0\ref\View.dll
+C:\Users\Rearms\Desktop\Rekhta\View\obj\Debug\net7.0\View.csproj.AssemblyReference.cache
+C:\Users\Rearms\Desktop\Rekhta\View\obj\Debug\net7.0\View.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rearms\Desktop\Rekhta\View\obj\Debug\net7.0\View.AssemblyInfoInputs.cache
+C:\Users\Rearms\Desktop\Rekhta\View\obj\Debug\net7.0\View.AssemblyInfo.cs
+C:\Users\Rearms\Desktop\Rekhta\View\obj\Debug\net7.0\View.csproj.CoreCompileInputs.cache
+C:\Users\Rearms\Desktop\Rekhta\View\obj\Debug\net7.0\View.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Rearms\Desktop\Rekhta\View\obj\Debug\net7.0\View.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Rearms\Desktop\Rekhta\View\obj\Debug\net7.0\View.RazorAssemblyInfo.cache
+C:\Users\Rearms\Desktop\Rekhta\View\obj\Debug\net7.0\View.RazorAssemblyInfo.cs
+C:\Users\Rearms\Desktop\Rekhta\View\obj\Debug\net7.0\View.dll
+C:\Users\Rearms\Desktop\Rekhta\View\obj\Debug\net7.0\refint\View.dll
+C:\Users\Rearms\Desktop\Rekhta\View\obj\Debug\net7.0\View.pdb
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\appsettings.json
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\WebAPI.deps.json
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\WebAPI.runtimeconfig.json
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\WebAPI.exe
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\View.staticwebassets.runtime.json
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\View.exe
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\View.deps.json
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\View.runtimeconfig.json
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\View.dll
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\View.pdb
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\System.Data.SqlClient.dll
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\runtimes\win-arm64\native\sni.dll
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\runtimes\win-x64\native\sni.dll
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\runtimes\win-x86\native\sni.dll
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\DAL.dll
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\Entities.dll
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\WebAPI.dll
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\Entities.pdb
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\WebAPI.pdb
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\DAL.pdb
+C:\Users\Rearms\Desktop\Rekhta\View\obj\Debug\net7.0\staticwebassets\msbuild.View.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Rearms\Desktop\Rekhta\View\obj\Debug\net7.0\staticwebassets\msbuild.build.View.props
+C:\Users\Rearms\Desktop\Rekhta\View\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.View.props
+C:\Users\Rearms\Desktop\Rekhta\View\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.View.props
+C:\Users\Rearms\Desktop\Rekhta\View\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\Rearms\Desktop\Rekhta\View\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\Rearms\Desktop\Rekhta\View\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\Rearms\Desktop\Rekhta\View\obj\Debug\net7.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
+C:\Users\Rearms\Desktop\Rekhta\View\obj\Debug\net7.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
+C:\Users\Rearms\Desktop\Rekhta\View\obj\Debug\net7.0\scopedcss\bundle\View.styles.css
+C:\Users\Rearms\Desktop\Rekhta\View\obj\Debug\net7.0\scopedcss\projectbundle\View.bundle.scp.css
+C:\Users\Rearms\Desktop\Rekhta\View\obj\Debug\net7.0\View.csproj.CopyComplete
+C:\Users\Rearms\Desktop\Rekhta\View\obj\Debug\net7.0\View.genruntimeconfig.cache
+C:\Users\Rearms\Desktop\Rekhta\View\obj\Debug\net7.0\ref\View.dll
