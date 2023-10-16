@@ -1,11 +1,10 @@
-﻿@page "/signup"
-@attribute [Authorize(Roles = "Administrator,Editor")]
+﻿@page "/createuser"
 @inject NavigationManager nav
 @using View.Authentication
 @using Microsoft.AspNetCore.Mvc
-
 @using View.Data
-@inject ISignupUser iup
+@inject ICreateUser iup
+
 
 <div class="row">
     <div class="col-lg-4 offset-lg-4 pt-4 pb-4 border">
@@ -37,45 +36,10 @@
             <input @bind="model.EmailAddress" class="form-control" placeholder="Email Address" />
         </div>
 
-        <div class="mb-3">
-            <label>Phone Number</label>
-            <input @bind="model.PhoneNumber" class="form-control" placeholder="Phone Number" />
-        </div>
 
-        <div class="mb-3">
-            <label>Date of Birth</label>
-            <input @bind="model.DateOfBirth" type="date" class="form-control" />
-        </div>
-
-        <div class="mb-3">
-            <label>City</label>
-            <input @bind="model.City" class="form-control" placeholder="City" />
-        </div>
-
-        <div class="mb-3">
-            <label>Area</label>
-            <input @bind="model.Area" class="form-control" placeholder="Area" />
-        </div>
-
-        <div class="mb-3">
-            <label>Location</label>
-            <input @bind="model.Location" class="form-control" placeholder="Location" />
-        </div>
-
-        <div class="mb-3">
-            <label>Is Active</label>
-            <input @bind="model.IsActive" type="checkbox" />
-        </div>
-
-        <div class="mb-3">
-            <label>Role</label>
-            <select @bind="model.Role" class="form-control">
-                <option value="User">User</option>
-                <option value="Editor">Editor</option>
-            </select>
-        </div>
+       
         <!-- End of additional properties -->
-        <p>@outputMessage</p>
+        <p style="color:red">@outputMessage</p>
         <div class="mb-3 d-grid gap-2">
             <button @onclick="SignupUser" class="btn btn-primary">Sign Up</button>
 
@@ -86,7 +50,7 @@
 
 @code {
 
-    string outputMessage = "s";
+    string outputMessage = "";
     Entities.EntUserProfile model = new Entities.EntUserProfile();
 
     public async Task SignupUser()
@@ -95,13 +59,14 @@
         {
             Random rand = new Random();
             model.UId = rand.Next(100000, 999999);
-            var response = await iup.SignupUser(model);
+            var response = await iup.CreateUser(model);
             outputMessage = response.Message;
+            nav.NavigateTo("/login", true);
         }
         catch (Exception ex)
         {
             Console.WriteLine($"Error during signup: {ex.Message}");
-           
+
         }
     }
 

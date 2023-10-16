@@ -8,8 +8,8 @@ create table UserAuth(
 	Role varchar(20)
 )
 select * from UserAuth
-drop table UserProfile
 select * from UserProfile;
+
 CREATE TABLE UserProfile (
     UId INT,
     FirstName VARCHAR(50),
@@ -25,65 +25,214 @@ CREATE TABLE UserProfile (
 );
 
 
+-- Commands
+	use Project
+	select * from UserProfile up join UserAuth ua 
+	on up.UId = ua.UId
+
 
 -- Stored Procedures
+-- Create a stored procedure to delete a user by UId
 
-CREATE PROCEDURE sp_LoginUserAuth
-    @username NVARCHAR(50),
-
-    @password NVARCHAR(50)
+alter PROCEDURE sp_DeleteUsersProfile 
+    @uid INT,
+	@role NVARCHAR(20),
+	@outputMessage NVARCHAR(100) = NULL OUTPUT
 AS
 BEGIN
-    -- Check if the provided username and password match a user in the UserProfile table.
-    SELECT UserName,Role, UId  
-    FROM UserAuth where  UserName = @username and Password = @password 
-END
-EXECUTE sp_LoginUserAuth @username = 'admin', @password = 'admin';
+    -- Begin a transaction to ensure data consistency
+    BEGIN TRANSACTION;
 
-
-create Procedure sp_SignupUser
-	@uid  NVARCHAR(50),
-    @username NVARCHAR(50),
-	@password NVARCHAR(50),
-	@role		NVARCHAR(20),
-    @firstname NVARCHAR(50),
-    @lastname NVARCHAR(50),
-    @emailaddress NVARCHAR(50),
-    @phonenumber NVARCHAR(50),
-	@dateofbirth NVARCHAR(50),
-    @city NVARCHAR(50),
-    @area NVARCHAR(50),
-    @location NVARCHAR(50),
-	@isactive bit
-	As
+    -- Delete from the UserProfile table
+	IF @role = 'Administrator' or @role = 'Editor' or @role = 'Cheif Editor'
 	BEGIN
+    DELETE FROM UserProfile
+    WHERE UId = @uid;
 
-	INSERT INTO UserAuth
-	Values(@uid, @username,@password,@role)
-	Insert Into UserProfile
-	Values(@uid,@firstname,@lastname,@emailaddress,@phonenumber,@dateofbirth,@city,@area,@location,@isactive);
+    -- Delete from the UserAuth table
+    DELETE FROM UserAuth
+    WHERE UId = @uid;
 	END
+
+    -- Commit the transaction
+    COMMIT;
+
+    -- If any error occurs, rollback the transaction
+    IF @@ERROR <> 0
+    BEGIN
+        ROLLBACK;
+    END;
+END;
+
+	create Procedure sp_GetUsersData
+	@role NVARCHAR(20)
+	AS
+	Begin
+	IF @role = 'Editor' or @role='Administrator' or @role='Cheif Editor'
+	BEGIN
+	select * from UserProfile up join UserAuth ua 
+	on up.UId = ua.UId
+	RETURN
+	END
+	END
+	sp_GetUsersData 'Editor'
+	
+	alter PROCEDURE sp_UpdateUsersProfileData
+    @uid INT,
+    @username NVARCHAR(255),
+    @role NVARCHAR(50) = NULL,
+    @isactive BIT = NULL,
+		@outputMessage NVARCHAR(100) = NULL OUTPUT
+
+AS
+BEGIN
+    -- Update Role in UserAuth table if @role is not NULL
+    IF @role IS NOT NULL
+    BEGIN
+        UPDATE UserAuth
+        SET Role = @role
+        WHERE UserName = @username AND UId = @uid;
+    END
+
+    -- Update IsActive in UserProfile table if @isactive is not NULL
+    IF @isactive IS NOT NULL
+    BEGIN
+        UPDATE UserProfile
+        SET IsActive = @isactive
+        WHERE  UId = @uid;
+    END
+END
+
+
+
+
+
+	CREATE PROCEDURE sp_LoginUserAuth
+		@username NVARCHAR(50),
+
+		@password NVARCHAR(50)
+	AS
+	BEGIN
+		-- Check if the provided username and password match a user in the UserProfile table.
+		SELECT UserName,Role, UId  
+		FROM UserAuth where  UserName = @username and Password = @password 
+	END
+	EXECUTE sp_LoginUserAuth @username = 'admin', @password = 'admin';
+
+
+create
+ALTER PROCEDURE sp_SignupUser
+	@uid NVARCHAR(50),
+	@username NVARCHAR(50),
+	@password NVARCHAR(50),
+	@role NVARCHAR(20),
+	@firstname NVARCHAR(50),
+	@lastname NVARCHAR(50),
+	@emailaddress NVARCHAR(50),
+	@phonenumber NVARCHAR(50),
+	@dateofbirth NVARCHAR(50),
+	@city NVARCHAR(50),
+	@area NVARCHAR(50),
+	@location NVARCHAR(50),
+	@isactive BIT,
+	@outputMessage NVARCHAR(100) = NULL OUTPUT
+AS
+BEGIN
+	DECLARE @usernameExists BIT;
+	DECLARE @emailExists BIT;
+
+	-- Check if the username already exists
+	SELECT @usernameExists = CASE WHEN COUNT(*) > 0 THEN 1 ELSE 0 END
+	FROM UserAuth
+	WHERE UserName = @username;
+
+	-- Check if the email address already exists
+	SELECT @emailExists = CASE WHEN COUNT(*) > 0 THEN 1 ELSE 0 END
+	FROM UserProfile
+	WHERE EmailAddress = @emailaddress;
+
+	-- If either username or email already exists, set the output message and do not proceed with insertion
+	IF @usernameExists = 1 
+	BEGIN
+		SET @outputMessage = 'Username already exists';
+		RETURN;
+	END
+
+	IF  @emailExists = 1
+	BEGIN
+		SET @outputMessage = 'Email already exists';
+		RETURN;
+	END
+
+	-- If neither username nor email exists, proceed with insertion
+	INSERT INTO UserAuth
+	VALUES (@uid, @username, @password, @role);
+
+	INSERT INTO UserProfile
+	VALUES (@uid, @firstname, @lastname, @emailaddress, @phonenumber, @dateofbirth, @city, @area, @location, @isactive);
+
+	SET @outputMessage = 'User registered successfully';
+END
+
+create
+ALTER PROCEDURE sp_CreateUser
+	@uid NVARCHAR(50),
+	@username NVARCHAR(50),
+	@password NVARCHAR(50),
+	@role NVARCHAR(20)= NULL,
+	@firstname NVARCHAR(50),
+	@lastname NVARCHAR(50),
+	@emailaddress NVARCHAR(50),
+	@phonenumber NVARCHAR(50)= NULL,
+	@dateofbirth NVARCHAR(50)= NULL,
+	@city NVARCHAR(50)= NULL,
+	@area NVARCHAR(50)= NULL,
+	@location NVARCHAR(50)= NULL,
+	@isactive BIT= NULL,
+	@outputMessage NVARCHAR(100) = NULL OUTPUT
+AS
+BEGIN
+    DECLARE @usernameExists BIT;
+    DECLARE @emailExists BIT;
+
+    -- Check if the username already exists
+    SELECT @usernameExists = CASE WHEN COUNT(*) > 0 THEN 1 ELSE 0 END
+    FROM UserAuth
+    WHERE UserName = @username;
+
+    -- Check if the email address already exists
+    SELECT @emailExists = CASE WHEN COUNT(*) > 0 THEN 1 ELSE 0 END
+    FROM UserProfile
+    WHERE EmailAddress = @emailaddress;
+
+    -- If either username or email already exists, set the output message and do not proceed with insertion
+    IF @usernameExists = 1 
+    BEGIN
+        SET @outputMessage = 'Username already exists';
+        RETURN;
+    END
+
+    IF @emailExists = 1
+    BEGIN
+        SET @outputMessage = 'Email already exists';
+        RETURN;
+    END
+
+    -- If neither username nor email exists, proceed with insertion
+    INSERT INTO UserAuth
+    VALUES (@uid, @username, @password, @role);
+
+    -- Insert only the specified columns
+   	INSERT INTO UserProfile
+	VALUES (@uid, @firstname, @lastname, @emailaddress, @phonenumber, @dateofbirth, @city, @area, @location, @isactive);
+
+    SET @outputMessage = 'User registered successfully';
+END
+
+
 -- Execute the stored procedure with random data
 
 
-
-
-EXEC sp_SignupUser 
-    @uid = '123456', -- Replace with a unique identifier for the user
-    @username = 'johndoe', -- Replace with the desired username
-    @password = 'password123', -- Replace with the desired password
-    @role = 'User', -- Replace with the desired role
-    @firstname = 'John', -- Replace with the first name
-    @lastname = 'Doe', -- Replace with the last name
-    @emailaddress = 'johndoe@example.com', -- Replace with the email address
-    @phonenumber = '123-456-7890', -- Replace with the phone number
-    @dateofbirth = '1990-01-15', -- Replace with the date of birth
-    @city = 'New York', -- Replace with the city
-    @area = 'Downtown', -- Replace with the area
-    @location = '123 Main St', -- Replace with the location
-    @isactive = 1; -- 1 for active, 0 for inactive
-
-	use Project
-select * from UserProfile up join UserAuth ua 
-	on up.UId = ua.UId
 	
+	
+

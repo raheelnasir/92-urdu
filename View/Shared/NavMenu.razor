@@ -15,7 +15,7 @@
             </NavLink>
         </div>
        
-        <AuthorizeView Roles="Administrator, User">
+        <AuthorizeView Roles="Administrator, Editor, Cheif Editor">
             <Authorized>
                 <div class="nav-item px-3">
                     <NavLink class="nav-link" href="counter">
@@ -24,7 +24,16 @@
                 </div>
             </Authorized>
         </AuthorizeView>
-        <AuthorizeView Roles="Administrator, Editor">
+        <AuthorizeView Roles="Administrator, Editor, Cheif Editor">
+            <Authorized>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="usersdata">
+                        <span class="oi oi-book" aria-hidden="true"></span> User Data
+                    </NavLink>
+                </div>
+            </Authorized>
+        </AuthorizeView>
+        <AuthorizeView Roles="Administrator, Editor, Cheif Editor">
             <Authorized>
                 <div class="nav-item px-3">
                     <NavLink class="nav-link" href="fetchdata">
