@@ -16,7 +16,7 @@
 @inject IDeleteUsersProfile iudp
 <div style="overflow:hidden; max-width:80vw;">
 
-    <h3>UsersData @userName.ToUpper() View</h3>
+    <h3>UsersData @userName View</h3>
 
 
 
@@ -101,7 +101,15 @@
                     }
                     else
                     {
-                        <p>Loading data...</p>
+                            <div class="text-center" style="margin-top:40vh; margin-left:40vw; margin-right:60vw; margin-bottom:60vh;">
+                                <div class="spinner-border" role="status">
+                                    <span class="visually-hidden">Loading Data...</span>
+
+                                </div>
+                                <p>
+                                    Loading
+                                </p>
+                            </div>
                     }
                 </tbody>
             </table>
@@ -135,11 +143,12 @@
 
                     <div class="form-group">
                         <label for="editIsActive">Is Active</label>
-                        <select class="form-control" id="editIsActive" @oninput="ToggleIsActive">
-                            <option value="true" selected="@editingUser.IsActive">True</option>
-                            <option value="false" selected="@(!editingUser.IsActive)">False</option>
+                        <select class="form-control" id="editIsActive" @onchange="ToggleIsActive">
+                            <option value="true" selected="@editingUser.IsActive.ToString().ToLower()">True</option>
+                            <option value="false" selected="@(!editingUser.IsActive).ToString().ToLower()">False</option>
                         </select>
                     </div>
+
 
 
                     <div class="form-group">
@@ -190,7 +199,17 @@
     }
     private void ToggleIsActive(ChangeEventArgs e)
     {
-        editingUser.IsActive = e.Value == "true";
+        Console.WriteLine(e.Value);
+        if(e.Value.ToString()== "true")
+        {
+            editingUser.IsActive = true;
+        }
+        else
+        {
+            editingUser.IsActive = false;
+
+            
+        }
     }
 
 
@@ -201,10 +220,8 @@
         // After updating, clear editingUser
         // For example:
         // iup.UpdateUser(editingUser);
-        Console.WriteLine(editingUser.UserName);
         Console.WriteLine(editingUser.Role);
         Console.WriteLine(editingUser.IsActive);
-        Console.WriteLine(editingUser.UId);
         iupd.UpdateUsersProfileData(editingUser);
         editingUser = null;
     }

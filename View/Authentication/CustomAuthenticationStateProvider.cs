@@ -21,6 +21,7 @@ namespace View.Authentication
         {
             try
             {
+                await Task.Delay(3000);
                 var userSessionStorageResult = await _sessionStorage.GetAsync<UserSession>("UserSession");
                 var userSession = userSessionStorageResult.Success ? userSessionStorageResult.Value : null;
                 if (userSession == null)

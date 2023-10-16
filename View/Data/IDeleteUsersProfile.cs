@@ -17,7 +17,7 @@ namespace View.Data
             if (ent != null)
             {
                 var response = await http.PutAsJsonAsync("api/UserProfile/deleteusersprofiledata", ent);
-                Console.WriteLine($"{response} Interface");
+              //  Console.WriteLine($"{response} Interface");
 
             }
         }

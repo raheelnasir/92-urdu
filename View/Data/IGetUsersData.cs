@@ -27,13 +27,13 @@ namespace View.Data
 
                 // Send a GET request to the API endpoint
                 var response = await http.GetFromJsonAsync<List<EntUserProfile>>(url);
-                Console.WriteLine($"Inter: {response}");
+             //   Console.WriteLine($"Inter: {response}");
 
                 return response;
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error while fetching user data: {ex.Message}");
+              //  Console.WriteLine($"Error while fetching user data: {ex.Message}");
                 return new List<EntUserProfile>(); // Return an empty list or handle the error as needed
             }
         }

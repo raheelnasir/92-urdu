@@ -39,7 +39,7 @@ namespace WebAPI.Controllers
                 if (!string.IsNullOrEmpty(data))
                 {
                     // Account created successfully
-                    Console.WriteLine($"{data} OUTPUT PARAMETER OUTPUT");
+                 //   Console.WriteLine($"{data} OUTPUT PARAMETER OUTPUT");
                     return Ok(new { Message = data, Data = "sda" });
                 }
                 else
@@ -83,7 +83,7 @@ namespace WebAPI.Controllers
                 if (!string.IsNullOrEmpty(data))
                 {
                     // Account created successfully
-                    Console.WriteLine($"{data} OUTPUT PARAMETER OUTPUT");
+               //     Console.WriteLine($"{data} OUTPUT PARAMETER OUTPUT");
                     return Ok(new { Message = data, Data = "sda" });
                 }
                 else
@@ -108,7 +108,7 @@ namespace WebAPI.Controllers
             {
                 return BadRequest("Role parameter is required.");
             }
-            Console.WriteLine(role);
+         //   Console.WriteLine(role);
             var response = await DALUsersData.GetUsersData(role);
 
             if (response == null)
@@ -117,7 +117,7 @@ namespace WebAPI.Controllers
             }
             else
             {
-                Console.WriteLine($"Controller: {response}");
+              //  Console.WriteLine($"Controller: {response}");
                 return Ok(response);
             }
         }
@@ -136,7 +136,7 @@ namespace WebAPI.Controllers
                     new SqlParameter("@isactive", eup.IsActive)
                 };
                 await MyCrud.CRUD("sp_UpdateUsersProfileData", sp);
-                Console.WriteLine($" Controller {sp}");
+            //    Console.WriteLine($" Controller {sp}");
 
             }
         }
@@ -155,7 +155,7 @@ namespace WebAPI.Controllers
                     new SqlParameter("@role", eup.Role)
                 };
                 await MyCrud.CRUD("sp_DeleteUsersProfile", sp);
-                Console.WriteLine($" Controller {sp}");
+           //     Console.WriteLine($" Controller {sp}");
 
             }
         }

@@ -1,5 +1,5 @@
-﻿@page "/signup"
-@attribute [Authorize(Roles = "Administrator,Editor")]
+﻿@page "/addusers"
+@attribute [Authorize(Roles = "Administrator,Editor, Cheif Editor")]
 @inject NavigationManager nav
 @using View.Authentication
 @using Microsoft.AspNetCore.Mvc
