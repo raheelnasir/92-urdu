@@ -35,6 +35,7 @@ namespace DAL
                             }
                         }
                     }
+                    await con.CloseAsync();
                 }
                 Console.WriteLine($"Inter: {userProfile}");
 

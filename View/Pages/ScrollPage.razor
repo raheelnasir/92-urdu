@@ -1,0 +1,86 @@
+﻿@page "/scroll"
+@using DAL;
+@using Entities
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<h1>کلک کریں تکمیل دیکھنے کے لئے:</h1>
+
+<div class="poetry-container">
+    @foreach (var coupletObject in Poetry)
+    {
+     
+
+        <div class="couplet">
+            <div style="direction:rtl">
+
+            @foreach (var line in coupletObject.Verses.Split(" , "))
+            {
+                <br />
+                @foreach(var words in  line.Split(" "))
+                    {
+                        @foreach(var word in words.Split(' '))
+                        {
+                            <button class="btn btn-primary m-1 p-1" @onclick="() => ShowMeaning(word)">
+                                @word 
+                            </button>
+                        }
+                        
+
+                    }
+                    <br>
+                 
+            }
+            </div>
+        
+        </div>
+    }
+
+</div>
+@popoverText
+<div id="popover" class="popover" style="display: @popoverDisplay;background-color:black; top: @popoverTop; left: @popoverLeft">@popoverText sad</div>
+
+@code {
+    public class CoupletObject
+    {
+        public List<string> Couplet { get; set; }
+    }
+    private string popoverText = "Meaning";
+    private string popoverDisplay = "block";
+    private string popoverTop = "0px";
+    private string popoverLeft = "0px";
+
+
+    Dictionary<string, EntWordDictionary> meaning = new Dictionary<string, EntWordDictionary>();
+    List<EntPoetry> Poetry = new List<EntPoetry>();
+    protected override async Task OnInitializedAsync()
+    {
+        meaning = await DAL.DALWordDictionary.GetWordDictionary();
+        Poetry = await DAL.DALPoetry.GetPoetryData();
+
+    }
+    
+
+
+
+    private void ShowMeaning(string word)
+    {
+        if (meaning.TryGetValue(word, out EntWordDictionary wordDictionary))
+        {
+            popoverText = wordDictionary.DMeaning;
+            popoverDisplay = "block";
+        }
+        else
+        {
+            // Handle the case when the word is not found in the dictionary
+            popoverText = "Meaning not found for " + word;
+            popoverDisplay = "block";
+        }
+    }
+
+   
+
+}
+

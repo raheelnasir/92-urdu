@@ -1,7 +1,6 @@
 C:\Users\Rearms\Desktop\Rekhta\Entities\bin\Debug\net7.0\Entities.deps.json
 C:\Users\Rearms\Desktop\Rekhta\Entities\bin\Debug\net7.0\Entities.dll
 C:\Users\Rearms\Desktop\Rekhta\Entities\bin\Debug\net7.0\Entities.pdb
-C:\Users\Rearms\Desktop\Rekhta\Entities\obj\Debug\net7.0\Entities.csproj.AssemblyReference.cache
 C:\Users\Rearms\Desktop\Rekhta\Entities\obj\Debug\net7.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Rearms\Desktop\Rekhta\Entities\obj\Debug\net7.0\Entities.AssemblyInfoInputs.cache
 C:\Users\Rearms\Desktop\Rekhta\Entities\obj\Debug\net7.0\Entities.AssemblyInfo.cs

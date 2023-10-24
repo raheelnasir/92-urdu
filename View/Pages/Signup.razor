@@ -44,7 +44,7 @@
 
         <div class="mb-3">
             <label>Date of Birth</label>
-            <input @bind="model.DateOfBirth" type="date" class="form-control" />
+            <input @bind="model.DateOfBirth" type="datetime-local" class="form-control" />
         </div>
 
         <div class="mb-3">
@@ -97,6 +97,7 @@
             model.UId = rand.Next(100000, 999999);
             var response = await iup.SignupUser(model);
             outputMessage = response.Message;
+            model = null;
         }
         catch (Exception ex)
         {

@@ -1,5 +1,9 @@
 ﻿@page "/"
-
+@inject AuthenticationStateProvider asp;
+@using Microsoft.Identity.Client;
+@using Microsoft.IdentityModel.Tokens;
+@using System.Diagnostics.Eventing.Reader;
+@using System.Security.Claims;
 <PageTitle>Index</PageTitle>
 
 
@@ -12,6 +16,16 @@
     </NotAuthorized>
 </AuthorizeView>
 
-Welcome to your new app.
-
+<ScrollPage/>
 <SurveyPrompt Title="How is Blazor working for you?" />
+
+@code{
+    string UserName = "sad";
+    protected override async Task OnInitializedAsync()
+    {
+        var auth = await asp.GetAuthenticationStateAsync();
+        var role = auth.User.FindFirst(ClaimTypes.Role)?.Value;
+        UserName = role;
+
+    }
+}

@@ -84,6 +84,7 @@ END;
     @isactive BIT = NULL,
 		@outputMessage NVARCHAR(100) = NULL OUTPUT
 
+
 AS
 BEGIN
     -- Update Role in UserAuth table if @role is not NULL
@@ -236,3 +237,191 @@ END
 	
 	
 
+	alter Procedure sp_GetPoetData 197485, 'Poet'
+ALTER PROCEDURE sp_GetPoetData
+    @uid int,
+    @role NVARCHAR(20)
+AS
+BEGIN
+    IF @role = 'Poet'
+    BEGIN
+        -- Return all data for the user with the specified UID
+        SELECT  ua.UserName,up.FirstName, up.LastName, up.EmailAddress, up.PhoneNumber, up.DateOfBirth, up.City, up.Area, up.Location
+        FROM UserProfile up
+        JOIN UserAuth ua ON up.UId = ua.UId
+        WHERE ua.UId = @uid
+    END
+END
+create table WordDictionary(
+DId int  ,
+ DWord nvarchar(20) ,
+ DMeaning nvarchar(50),
+)
+insert into WordDictionary
+Values(1,'????','???? ?? ??? ?????? ???? ????'),(2,'????','????? ?? ???? ????'),(3,'??','???? ?? ?? ????? ??');
+select * from WordDictionary
+
+use Project
+select distinct(pid), sher from SheroShairi
+SELECT pid, STRING_AGG(sher, ' ') AS ConcatenatedSher
+FROM SheroShairi
+GROUP BY pid;
+
+create procedure sp_GetWordDictionary
+AS
+BEGIN
+select * from WordDictionary
+END
+
+
+
+
+
+
+
+
+
+
+create table ContentDetails (
+UId int,
+ContentName varchar(50),
+ContentArrangement varchar(15),
+ContentId int  primary key,
+ContentType varchar(1),
+foreign key (UId) references UserAuth(UId)
+)
+
+create table Verses (
+ContentId int,
+VerseId int identity(1,1) primary key,
+Verse varchar(50),
+foreign key (ContentId) references ContentDetails(ContentId)
+)
+select * from ContentDetails
+
+alter procedure sp_SetContentDetails
+@uid int,
+@contentname nvarchar(50),
+@contentarrangement nvarchar(15),
+@contentid int,
+@contenttype nvarchar(1),
+@outputMessage nvarchar(100) = NULL OUTPUT
+AS
+BEGIN
+insert into ContentDetails(UId,ContentName,ContentArrangement,ContentId,ContentType)
+Values(@uid,@contentname,@contentarrangement,@contentid,@contenttype)
+END
+
+alter procedure sp_PostVerse 
+@contentid int,
+@verse varchar(50),
+@outputMessage nvarchar(100) = NULL OUTPUT
+AS
+BEGIN
+insert into Verses(ContentId, Verse)
+Values (@contentid,@verse)
+END
+select * from Verses
+
+-- Couplets for Content 1 (Poem 1)
+INSERT INTO Verses(ContentId, Verse) VALUES
+(1, 'Verse 1 of Poem 1'),
+(1, 'Verse 2 of Poem 1'),
+(1, 'Verse 3 of Poem 1');
+
+-- Couplets for Content 2 (Song 1)
+INSERT INTO Couplet (ContentId, Verse) VALUES
+(2, 'Verse 1 of Song 1'),
+(2, 'Verse 2 of Song 1');
+
+-- Couplets for Content 3 (Quote 1)
+INSERT INTO Couplet (ContentId, Verse) VALUES
+(3, 'Quote 1');
+
+SELECT 
+    U.UserId AS UserID, 
+    CD.ContentId AS ContentID, 
+    CD.ContentName, 
+    CD.Type, 
+    CO.VerseId AS VerseID, 
+    CO.Verse
+FROM UserProfile U
+INNER JOIN ContentDetails CD ON U.UserId = CD.UserId
+LEFT JOIN Couplet CO ON CD.ContentId = CO.ContentId
+ORDER BY U.UserId, CD.ContentId, CO.VerseId;
+
+
+
+SELECT
+    U.UserId AS UserID,
+    CD.ContentId AS ContentID,
+    CD.ContentName,
+    CD.Type,
+    STRING_AGG(CO.Verse, ', ') AS Verses
+FROM UserProfile U
+INNER JOIN ContentDetails CD ON U.UserId = CD.UserId
+LEFT JOIN   CO ON CD.ContentId = CO.ContentId
+GROUP BY U.UserId, CD.ContentId, CD.ContentName, CD.Type
+ORDER BY U.UserId, CD.ContentId;
+
+
+SELECT
+    U.UserId AS UserID,
+    CD.ContentId AS ContentID,
+    CD.ContentName,
+    CD.Type,
+    STRING_AGG(CO.Verse, ', ') WITHIN GROUP (ORDER BY CO.VerseId) AS Verses
+FROM UserProfile U
+INNER JOIN ContentDetails CD ON U.UserId = CD.UserId
+LEFT JOIN Couplet CO ON CD.ContentId = CO.ContentId
+GROUP BY U.UserId, CD.ContentId, CD.ContentName, CD.Type
+ORDER BY U.UserId, CD.ContentId;
+
+
+-- Insert data into ContentDetails
+INSERT INTO ContentDetails (UId, ContentName, ContentArrangement, ContentId, ContentType)
+VALUES (197485, 'Sample Content 1', '4-4', 1, 'P');
+
+-- Insert data into Verses for ContentId 1
+INSERT INTO Verses (ContentId, Verse)
+VALUES (1, 'Verse 1');
+INSERT INTO Verses (ContentId, Verse)
+VALUES (1, 'Verse 2');
+INSERT INTO Verses (ContentId, Verse)
+VALUES (1, 'Verse 3');
+INSERT INTO Verses (ContentId, Verse)
+VALUES (1, 'Verse 4');
+
+-- Insert data into ContentDetails for another content
+INSERT INTO ContentDetails (UId, ContentName, ContentArrangement, ContentId, ContentType)
+VALUES (197485, 'Sample Content 2', 'Random', 2, 'T');
+
+-- Insert data into Verses for ContentId 2
+INSERT INTO Verses (ContentId, Verse)
+VALUES (2, 'Verse A');
+INSERT INTO Verses (ContentId, Verse)
+VALUES (2, 'Verse B');
+INSERT INTO Verses (ContentId, Verse)
+VALUES (2, 'Verse C');
+INSERT INTO Verses (ContentId, Verse)
+VALUES (2, 'Verse D');
+
+SELECT CD.UId, CD.ContentType, CD.ContentArrangement, CD.ContentName, STRING_AGG(V.Verse, ', ') as Verses
+FROM ContentDetails CD
+JOIN Verses V ON CD.ContentId = V.ContentId
+GROUP BY CD.UId, CD.ContentType, CD.ContentArrangement, CD.ContentName;
+
+
+alter procedure sp_GetPotry
+
+AS
+BEGIN
+
+SELECT CD.UId, CD.ContentType, CD.ContentArrangement, CD.ContentName, STRING_AGG(V.Verse, ' , ') as Verses,
+       CONCAT(UP.FirstName, ' ', UP.LastName) AS FullName, UA.UserName
+FROM ContentDetails CD
+JOIN Verses V ON CD.ContentId = V.ContentId
+JOIN UserProfile UP ON CD.UId = UP.UId
+JOIN UserAuth UA ON CD.UId = UA.UId
+GROUP BY CD.UId, CD.ContentType, CD.ContentArrangement, CD.ContentName, UP.FirstName, UP.LastName, UA.UserName;
+END

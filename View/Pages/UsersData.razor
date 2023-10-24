@@ -39,7 +39,7 @@
                         <th>Area</th>
                         <th>Location</th>
                         <th>IsActive</th>
-                        <th>Actions</th>
+                                                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -144,8 +144,8 @@
                     <div class="form-group">
                         <label for="editIsActive">Is Active</label>
                         <select class="form-control" id="editIsActive" @onchange="ToggleIsActive">
-                            <option value="true" selected="@editingUser.IsActive.ToString().ToLower()">True</option>
-                            <option value="false" selected="@(!editingUser.IsActive).ToString().ToLower()">False</option>
+                            <option value="true" selected="@editingUser.IsActive">True</option>
+                            <option value="false" selected="@(!editingUser.IsActive)">False</option>
                         </select>
                     </div>
 
@@ -169,21 +169,20 @@
 }
 
 @code {
-    public List<EntUserProfile> data = null;
-    private EntUserProfile editingUser; // Store the user being edited
+    public List<EntUserProfile>? data = null;
+    private EntUserProfile? editingUser; // Store the user being edited
 
-    public string userName;
-    private string userRole;
+    public string? userName{ get; set; }
+    private string? userRole{ get; set; }
     EntUserProfile updateEnt = new EntUserProfile();
 
     protected override async Task OnInitializedAsync()
     {
         var authState = await aspas.GetAuthenticationStateAsync();
         userName = authState.User.FindFirst(ClaimTypes.Name)?.Value;
-
+        Console.WriteLine(authState);
         // Access the user's role from claims
         userRole = authState.User.FindFirst(ClaimTypes.Role)?.Value;
-
         data = await iup.GetUsersData(userRole);
     }
 
@@ -215,11 +214,7 @@
 
     public void UpdateUser()
     {
-        // Call the function to update the user using editingUser data
-        // You can implement this function to update the user in your data source
-        // After updating, clear editingUser
-        // For example:
-        // iup.UpdateUser(editingUser);
+ 
         Console.WriteLine(editingUser.Role);
         Console.WriteLine(editingUser.IsActive);
         iupd.UpdateUsersProfileData(editingUser);

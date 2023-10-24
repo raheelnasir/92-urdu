@@ -4,33 +4,65 @@
 @inject NavigationManager navManager
 
 <PageTitle>View</PageTitle>
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+<MudLayout>
+    <MudAppBar Elevation="1">
+        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
+        <MudText Typo="Typo.h5" Class="ml-3">Application</MudText>
+        <MudSpacer />
 
-<div class="page">
-    <div class="sidebar">
+         <AuthorizeView Roles="Poet">
+             <Authorized >
+             <a href="poetprofile" class="btn btn-primary m-2 p-1">Poet Profile</a
+            </Authorized>
+        </AuthorizeView>
+        <AuthorizeView>
+            <Authorized>
+                <a @onclick="Logout" class="btn btn-danger m-2 p-1" href="javascript:void(0)">Logout</a>
+
+            </Authorized>
+           
+            <NotAuthorized>
+                <a href="/login">Login</a>
+            </NotAuthorized>
+        </AuthorizeView>
+       
+        <MudIconButton Icon="@Icons.Material.Filled.MoreVert" Color="Color.Success" Edge="Edge.End" />
+    </MudAppBar>
+    <MudDrawer @bind-Open="_drawerOpen" ClipMode="DrawerClipMode.Always" Elevation="2" Color="Color.Primary">
         <NavMenu />
+    </MudDrawer>
+    <MudMainContent>
+        @Body
+    </MudMainContent>
+</MudLayout>
+@*<div class="page">
+    <div class="sidebar">
+       
     </div>
 
     <main>
         <div class="top-row px-4">
             <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
-            <AuthorizeView>
-                <Authorized>
-                    <a @onclick = "Logout" href="javascript:void(0)">Logout</a>
-                </Authorized>
-                <NotAuthorized>
-                    <a href="/login">Login</a>
-                </NotAuthorized>
-            </AuthorizeView>
+            
         </div>
 
         <article class="content px-4">
-            @Body
+           
         </article>
     </main>
-</div>
+</div>*@
 
 
 @code {
+    bool _drawerOpen = true;
+
+    void DrawerToggle()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
     private async Task Logout()
     {
         var customAuthStateProvider = (CustomAuthenticationStateProvider)authStateProvider;

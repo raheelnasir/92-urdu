@@ -1,0 +1,86 @@
+﻿@page "/addsher"
+@using View.Data
+@using WebAPI
+
+@inject AuthenticationStateProvider asp;
+@inject ISetContentDetails isd;
+@inject IPostVerses ipv;
+
+@using Entities
+@using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
+@using Authentication
+@using Microsoft.AspNetCore.Components.Authorization;
+@using Microsoft.Identity.Client;
+@using Microsoft.IdentityModel.Tokens;
+@using System.Diagnostics.Eventing.Reader;
+@using System.Security.Claims;
+<h3>Dynamic Input Fields</h3>
+
+
+<input type="name" @bind=ECD.ContentName class="p-1 m-3" />
+@foreach (var inputValue in inputValues)
+{
+    <div cla>
+        <input type="text" style="box-shadow:2px 2px 2px 2px gray" class="p-4 m-4" @bind="inputValue.Value" />
+        <button @onclick="() => RemoveInputValue(inputValue)">Remove</button>
+    </div>
+}
+<button @onclick="PostSher">CLICK POST</button>
+
+
+<div>
+    <input type="text" style="box-shadow:2px 2px 2px 2px gray" class="p-4 m-4" @bind="newInputValue" />
+    <button @onclick="AddInputValue">Add</button>
+</div>
+
+@code {
+    private List<InputModel> inputValues = new List<InputModel>();
+    private string newInputValue = "";
+    private async void AddInputValue()
+    {
+        if (!string.IsNullOrEmpty(newInputValue))
+        {
+            inputValues.Add(new InputModel { Value = newInputValue });
+            newInputValue = "";
+
+        }
+    }
+
+    private void RemoveInputValue(InputModel inputValue)
+    {
+        inputValues.Remove(inputValue);
+    }
+
+    EntContentDetails ECD = new EntContentDetails();
+
+    public async Task PostSher()
+    {
+        Random rand = new Random();
+        var cid = rand.Next(100000, 999999);
+        var auth = await asp.GetAuthenticationStateAsync();
+        var uid = auth.User.FindFirst("UId")?.Value;
+        ECD.UId = Convert.ToInt32(uid);
+        ECD.ContentType = 'P';
+        ECD.ContentId = cid+1;
+        ECD.ContentArrangement = "4T4";
+        await isd.SetContentDetails(ECD);
+
+        foreach(var input in inputValues)
+        {
+
+            EntVerse obj = new EntVerse();
+            obj.ContentId = ECD.ContentId;
+            obj.Verse = input.Value;
+
+            await ipv.PostVerses(obj);
+            Console.WriteLine($"{obj.Verse} GONE");
+
+        }
+    }
+
+    public class InputModel
+    {
+        public string? Value { get; set; }
+    }
+
+}

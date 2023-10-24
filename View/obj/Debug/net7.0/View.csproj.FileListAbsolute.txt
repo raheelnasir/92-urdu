@@ -120,3 +120,13 @@ C:\Users\Rearms\Desktop\Rekhta\View\obj\Debug\net7.0\scopedcss\projectbundle\Vie
 C:\Users\Rearms\Desktop\Rekhta\View\obj\Debug\net7.0\View.csproj.CopyComplete
 C:\Users\Rearms\Desktop\Rekhta\View\obj\Debug\net7.0\View.genruntimeconfig.cache
 C:\Users\Rearms\Desktop\Rekhta\View\obj\Debug\net7.0\ref\View.dll
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\Microsoft.AspNetCore.Components.dll
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Forms.dll
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Web.dll
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\Microsoft.Extensions.Localization.dll
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\Microsoft.Extensions.Localization.Abstractions.dll
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\Microsoft.JSInterop.dll
+C:\Users\Rearms\Desktop\Rekhta\View\bin\Debug\net7.0\MudBlazor.dll
