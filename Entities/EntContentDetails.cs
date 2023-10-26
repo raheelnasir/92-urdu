@@ -7,12 +7,10 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    public class EntContentDetails
+public class EntContentDetails
     {
         public int UId { get; set; }
         public string? ContentName {  get; set; }
-        public string? ContentArrangement { get; set; }
-        public int ContentId { get; set; }
         public char ContentType { get; set; }
     }
 }

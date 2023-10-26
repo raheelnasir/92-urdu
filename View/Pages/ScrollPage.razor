@@ -2,6 +2,9 @@
 @using DAL;
 @using Entities
 
+<script src="_content/View/jqueryInterop.js"></script>
+
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -15,24 +18,37 @@
 
         <div class="couplet">
             <div style="direction:rtl">
+           <h1>
+                    Poet  @coupletObject.FullName.ToString()
+           </h1>  
 
-            @foreach (var line in coupletObject.Verses.Split(" , "))
+            @foreach (var line in coupletObject.Verses.Split(" __ "))
             {
+
                 <br />
-                @foreach(var words in  line.Split(" "))
+                <div class="d-flex justify-content-center">
+
+                @foreach(var words in  line.Split(" _ "))
                     {
-                        @foreach(var word in words.Split(' '))
-                        {
-                            <button class="btn btn-primary m-1 p-1" @onclick="() => ShowMeaning(word)">
-                                @word 
-                            </button>
-                        }
-                        
+                        <div class="p-1" style="border:1px solid black; margin:2px 4px; ">
+                            @foreach (var word in words.Split(' '))
+                            {
+                                    <button class="btn btn-primary m-1"  id="popoverButton" data-bs-toggle="popover" @onclick="()=>ShowMeaning(word)"  data-bs-trigger="click" title="Popover Title" data-bs-content="@popoverText">
+                                        @word
+                                    </button>
+
+
+                               
+                            }
+                            </div>
+                      
+
 
                     }
-                    <br>
-                 
+                    </div>
             }
+                <hr />
+
             </div>
         
         </div>

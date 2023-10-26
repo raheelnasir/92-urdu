@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NWN6ZQ5KZrZO6gFWG+NMoMlI8YzrUMQdyYJO+55nlzo=",
+  "Hash": "Ch63xPa3DmxRMhxj5X/NCTyqxGQ8Y4F24cCU5zw9t8A=",
   "Source": "View",
   "BasePath": "_content/View",
   "Mode": "Default",
@@ -316,6 +316,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "C:\\Users\\Rearms\\Desktop\\Rekhta\\View\\wwwroot\\jqueryInterop.js",
+      "SourceId": "View",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rearms\\Desktop\\Rekhta\\View\\wwwroot\\",
+      "BasePath": "_content/View",
+      "RelativePath": "jqueryInterop.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\jqueryInterop.js"
     }
   ]
 }

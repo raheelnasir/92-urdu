@@ -11,7 +11,7 @@ namespace WebAPI.Controllers
     {
         [HttpPost]
         [Route("setcontentdetails")]
-        public async Task SetContentData(EntContentDetails eup)
+        public async Task<int> SetContentData(EntContentDetails eup)
         {
             Console.WriteLine("HEY RREACH");
             if (eup != null)
@@ -20,12 +20,16 @@ namespace WebAPI.Controllers
                  {
                     new SqlParameter("@uid", eup.UId),
                     new SqlParameter("@contentname", eup.ContentName),
-                    new SqlParameter("@contentarrangement", eup.ContentArrangement),
-                    new SqlParameter("@contentid", eup.ContentId),
                     new SqlParameter("@contenttype", eup.ContentType)
                  };
+                var Sd=  await MyCrud.CRUD("sp_SetContentDetails", sp);
+                Console.WriteLine($"CONTENTCONTROLLER{Sd}");
 
-                await MyCrud.CRUD("sp_SetContentDetails", sp);
+                return Convert.ToInt32(Sd) ;
+            }
+            else
+            {
+                return 0;
             }
         }
 
@@ -39,7 +43,9 @@ namespace WebAPI.Controllers
                 SqlParameter[] sp = new SqlParameter[]
                  {
                     new SqlParameter("@contentid", eup.ContentId),
-                    new SqlParameter("@verse", eup.Verse)
+                    new SqlParameter("@verse1", eup.Verse1),
+                    new SqlParameter("@verse2", eup.Verse2)
+
                  };
 
                 await MyCrud.CRUD("sp_PostVerse ", sp);

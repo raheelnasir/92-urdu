@@ -17,7 +17,7 @@ namespace DAL
                 using (SqlConnection conn = DBHelper.GetConnection())
                 {
                     await conn.OpenAsync();
-                    using (SqlCommand cmd = new SqlCommand("sp_GetPotry", conn))
+                    using (SqlCommand cmd = new SqlCommand("sp_GetPoemNGhazal", conn))
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
@@ -28,7 +28,6 @@ namespace DAL
                                 EntPoetry contentDetails = new EntPoetry();
                                 contentDetails.UId = Convert.ToInt32(sdr["UId"]);
                                 contentDetails.ContentType = sdr["ContentType"].ToString();
-                                contentDetails.ContentArrangement = sdr["ContentArrangement"].ToString();
                                 contentDetails.ContentName = sdr["ContentName"].ToString();
                                 contentDetails.Verses = sdr["Verses"].ToString();
                                 contentDetails.FullName = sdr["FullName"].ToString();

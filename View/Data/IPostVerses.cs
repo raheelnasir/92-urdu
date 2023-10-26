@@ -14,7 +14,7 @@ namespace View.Data
 
         public async Task PostVerses(EntVerse cup)
         {
-            Console.WriteLine($"{cup.Verse} {cup.ContentId} COntrollerSET CONTENT");
+            Console.WriteLine($"{cup.Verse1}  COntrollerSET CONTENT");
             var response = await http.PostAsJsonAsync("api/Content/postverses", cup);
 
         }

@@ -281,20 +281,18 @@ END
 
 
 
-
 create table ContentDetails (
 UId int,
 ContentName varchar(50),
-ContentArrangement varchar(15),
-ContentId int  primary key,
+ContentId int Identity(1,1) primary key,
 ContentType varchar(1),
 foreign key (UId) references UserAuth(UId)
 )
-
 create table Verses (
 ContentId int,
 VerseId int identity(1,1) primary key,
-Verse varchar(50),
+Verse1 varchar(50),
+Verse2 varchar(50),
 foreign key (ContentId) references ContentDetails(ContentId)
 )
 select * from ContentDetails
@@ -302,24 +300,24 @@ select * from ContentDetails
 alter procedure sp_SetContentDetails
 @uid int,
 @contentname nvarchar(50),
-@contentarrangement nvarchar(15),
-@contentid int,
 @contenttype nvarchar(1),
 @outputMessage nvarchar(100) = NULL OUTPUT
 AS
 BEGIN
-insert into ContentDetails(UId,ContentName,ContentArrangement,ContentId,ContentType)
-Values(@uid,@contentname,@contentarrangement,@contentid,@contenttype)
+insert into ContentDetails(UId,ContentName,ContentType)
+Values(@uid,@contentname,@contenttype)
+Set @outputMessage = SCOPE_IDENTITY();
 END
 
 alter procedure sp_PostVerse 
 @contentid int,
-@verse varchar(50),
+@verse1 varchar(50),
+@verse2 varchar(50),
 @outputMessage nvarchar(100) = NULL OUTPUT
 AS
 BEGIN
-insert into Verses(ContentId, Verse)
-Values (@contentid,@verse)
+insert into Verses(ContentId, Verse1, Verse2)
+Values (@contentid,@verse1,@verse2)
 END
 select * from Verses
 
@@ -412,16 +410,17 @@ JOIN Verses V ON CD.ContentId = V.ContentId
 GROUP BY CD.UId, CD.ContentType, CD.ContentArrangement, CD.ContentName;
 
 
-alter procedure sp_GetPotry
+alter procedure sp_GetPoemNGhazal
 
 AS
 BEGIN
 
-SELECT CD.UId, CD.ContentType, CD.ContentArrangement, CD.ContentName, STRING_AGG(V.Verse, ' , ') as Verses,
+SELECT CD.UId, CD.ContentType,  CD.ContentName, STRING_AGG(Concat(V.Verse1, ' _ ', V.Verse2) , ' __ ') as Verses,
        CONCAT(UP.FirstName, ' ', UP.LastName) AS FullName, UA.UserName
 FROM ContentDetails CD
 JOIN Verses V ON CD.ContentId = V.ContentId
 JOIN UserProfile UP ON CD.UId = UP.UId
 JOIN UserAuth UA ON CD.UId = UA.UId
-GROUP BY CD.UId, CD.ContentType, CD.ContentArrangement, CD.ContentName, UP.FirstName, UP.LastName, UA.UserName;
+GROUP BY CD.UId, CD.ContentType,  CD.ContentName, UP.FirstName, UP.LastName, UA.UserName;
+
 END

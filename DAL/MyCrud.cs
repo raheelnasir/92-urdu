@@ -35,8 +35,9 @@ namespace DAL
                         Console.WriteLine($"{ outputMessage} CRUD");
                         if(outputMessage != null )
                         {
-                            return outputMessage.ToString(); // WIll return UserName already exist
+                            Console.WriteLine($"OUT MESSAGE{outputMessage}");
 
+                            return outputMessage.ToString(); // WIll return UserName already exist
                         }
                         else
                         {
