@@ -43,8 +43,7 @@ namespace DAL
                                 }
                                 else
                                 {
-                                    // Invalid date, handle accordingly
-                                    userProfile.DateOfBirth = DateTime.MaxValue; // or another default value
+                                    userProfile.DateOfBirth = DateTime.MaxValue;
                                 }
 
                                 userProfile.City = sdr["City"].ToString();

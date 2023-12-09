@@ -1,0 +1,68 @@
+﻿@page "/"
+@layout CustomUserLayout
+
+<section class="mt-5 text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 d-flex justify-content-center align-items-center" style="min-height:50vh">
+                <div>
+                    <article class="pb-5 ">آج کے منتخب 1 شعر</article>
+                    @foreach (var vrs in PoetPoetry)
+                    {
+
+                        <PhraseRenderer Misra1="@vrs.Verse1" Misra2="@vrs.Verse2" />
+
+                        <div>
+                            <a href="#">@vrs.Fullname</a>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<View.Pages.HomePage.PoetOfTheDay />
+
+@code {
+
+
+
+    public class CoupletObject
+    {
+        public List<string>? Couplet { get; set; }
+
+    }
+
+
+    public string Meaning = "Sa";
+
+    Dictionary<string, EntWordDictionary> meaning = new Dictionary<string, EntWordDictionary>();
+    List<EntPoetry> Poetry = new List<EntPoetry>();
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        PoetPoetry = await DAL.DALPoetry.GetPoetryByPoetID();
+
+    }
+
+
+
+
+    private async void ShowMeaning(string word)
+    {
+        Meaning = await DAL.DALWordDictionary.GetWordMeaning(word.ToString());
+
+    }
+
+
+
+    List<EntVerse> PoetPoetry = new List<EntVerse>();
+
+
+
+
+}
+
+

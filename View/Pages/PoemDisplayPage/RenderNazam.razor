@@ -1,0 +1,28 @@
+﻿@page "/poem/{poemid}"
+
+<DisplayContent ContentName="Bange Dara" PoetName="Raheel">
+    <Content>
+        <ListRender TList="EntGetContent" ContentList="@Content">
+            <Data>
+                <div class="d-flex flex-column">
+                    <PhraseRenderer Misra1="@context.Verse1" Misra2="@context.Verse2" />
+                    <h6 class="urdu">@ContentName</h6>
+                    <h6 class="urdu">@PoetName</h6>
+                </div>
+            </Data>
+        </ListRender>
+    </Content>
+</DisplayContent>
+
+@code {
+    [Parameter] public string? poemid { get; set; }
+    List<EntGetContent> Content = new List<EntGetContent>();
+    string ContentName;
+    string PoetName;
+    protected override async Task OnInitializedAsync()
+    {
+        base.OnInitialized();
+        Content = await DAL.DALGetNazamByNazamId.GetNazamByNazamId(poemid);
+        Console.WriteLine("hi",Content[0].Verse1);
+    }
+}

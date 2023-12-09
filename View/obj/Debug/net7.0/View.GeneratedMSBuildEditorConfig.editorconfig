@@ -20,56 +20,152 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rearms/Desktop/Rekhta/View/Pages/AddSher.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkU2hlci5yYXpvcg==
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/ContentCRUD/PostContentMainPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGVudENSVURcUG9zdENvbnRlbnRNYWluUGFnZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rearms/Desktop/Rekhta/View/Pages/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/ContentCRUD/PostGeneric.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGVudENSVURcUG9zdEdlbmVyaWMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rearms/Desktop/Rekhta/View/Pages/CreateUser.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXRlVXNlci5yYXpvcg==
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/ContentCRUD/PostGhazal.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGVudENSVURcUG9zdEdoYXphbC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rearms/Desktop/Rekhta/View/Pages/Custom Pages/CustomUserLayout.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tIFBhZ2VzXEN1c3RvbVVzZXJMYXlvdXQucmF6b3I=
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/ContentCRUD/PostNazam.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGVudENSVURcUG9zdE5hemFtLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rearms/Desktop/Rekhta/View/Pages/Custom Pages/ScrollPage.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tIFBhZ2VzXFNjcm9sbFBhZ2UucmF6b3I=
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/ContentCRUD/PostPhrases.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGVudENSVURcUG9zdFBocmFzZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rearms/Desktop/Rekhta/View/Pages/FetchData.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/GhazalDisplagePage/RenderGhazal.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2hhemFsRGlzcGxhZ2VQYWdlXFJlbmRlckdoYXphbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/GhazalSearchPage/GhazalSearchMainPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2hhemFsU2VhcmNoUGFnZVxHaGF6YWxTZWFyY2hNYWluUGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/HomePage/HomePage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZVBhZ2VcSG9tZVBhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/HomePage/PoetOfTheDay.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZVBhZ2VcUG9ldE9mVGhlRGF5LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Rearms/Desktop/Rekhta/View/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rearms/Desktop/Rekhta/View/Pages/Login.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/MainPagesCustomLayout/CustomUserLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFpblBhZ2VzQ3VzdG9tTGF5b3V0XEN1c3RvbVVzZXJMYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rearms/Desktop/Rekhta/View/Pages/PoetProfile.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9ldFByb2ZpbGUucmF6b3I=
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/PoemDisplayPage/RenderNazam.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9lbURpc3BsYXlQYWdlXFJlbmRlck5hemFtLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rearms/Desktop/Rekhta/View/Pages/Signup.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2lnbnVwLnJhem9y
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/PoemsSearchPage/PoemSearchMainPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9lbXNTZWFyY2hQYWdlXFBvZW1TZWFyY2hNYWluUGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/PoetsAndUsersPublicProfile/ProfileAboutComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9ldHNBbmRVc2Vyc1B1YmxpY1Byb2ZpbGVcUHJvZmlsZUFib3V0Q29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/PoetsAndUsersPublicProfile/ProfileGhazalsComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9ldHNBbmRVc2Vyc1B1YmxpY1Byb2ZpbGVcUHJvZmlsZUdoYXphbHNDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/PoetsAndUsersPublicProfile/ProfileHeaderComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9ldHNBbmRVc2Vyc1B1YmxpY1Byb2ZpbGVcUHJvZmlsZUhlYWRlckNvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/PoetsAndUsersPublicProfile/ProfilePageMain.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9ldHNBbmRVc2Vyc1B1YmxpY1Byb2ZpbGVcUHJvZmlsZVBhZ2VNYWluLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/PoetsAndUsersPublicProfile/ProfilePoemsComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9ldHNBbmRVc2Vyc1B1YmxpY1Byb2ZpbGVcUHJvZmlsZVBvZW1zQ29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/PoetsPrivateProfileCRUD/PoetProfile.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9ldHNQcml2YXRlUHJvZmlsZUNSVURcUG9ldFByb2ZpbGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/PoetsSearchPage/PoetsCard.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9ldHNTZWFyY2hQYWdlXFBvZXRzQ2FyZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/PoetsSearchPage/PoetSearchList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9ldHNTZWFyY2hQYWdlXFBvZXRTZWFyY2hMaXN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/PoetsSearchPage/PoetSearchMainPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9ldHNTZWFyY2hQYWdlXFBvZXRTZWFyY2hNYWluUGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/PoetsSearchPage/ShowAllPoets.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9ldHNTZWFyY2hQYWdlXFNob3dBbGxQb2V0cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/PoetsSearchPage/ShowFemalePoets.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9ldHNTZWFyY2hQYWdlXFNob3dGZW1hbGVQb2V0cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/PoetsSearchPage/ShowMalePoets.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9ldHNTZWFyY2hQYWdlXFNob3dNYWxlUG9ldHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/Reusable/DisplayContent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmV1c2FibGVcRGlzcGxheUNvbnRlbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/Reusable/FileUpload.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmV1c2FibGVcRmlsZVVwbG9hZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/Reusable/ListRender.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmV1c2FibGVcTGlzdFJlbmRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/Reusable/PhraseRenderer.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmV1c2FibGVcUGhyYXNlUmVuZGVyZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/SubComponents/GhazalNazamSearch.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3ViQ29tcG9uZW50c1xHaGF6YWxOYXphbVNlYXJjaC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/SubComponents/Navbar.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3ViQ29tcG9uZW50c1xOYXZiYXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/UserAuthLoginSignup/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlckF1dGhMb2dpblNpZ251cFxMb2dpbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/UserAuthLoginSignup/SignupUsers.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlckF1dGhMb2dpblNpZ251cFxTaWdudXBVc2Vycy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Rearms/Desktop/Rekhta/View/Pages/UserLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlckxheW91dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rearms/Desktop/Rekhta/View/Pages/UsersData.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlcnNEYXRhLnJhem9y
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/UsersCRUD/AddUserByAdmins.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlcnNDUlVEXEFkZFVzZXJCeUFkbWlucy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rearms/Desktop/Rekhta/View/Pages/WordDictionary.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV29yZERpY3Rpb25hcnkucmF6b3I=
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/UsersCRUD/UsersData.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlcnNDUlVEXFVzZXJzRGF0YS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/WordDictionaryCRUD/WordDictionary.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV29yZERpY3Rpb25hcnlDUlVEXFdvcmREaWN0aW9uYXJ5LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Rearms/Desktop/Rekhta/View/Shared/SurveyPrompt.razor]

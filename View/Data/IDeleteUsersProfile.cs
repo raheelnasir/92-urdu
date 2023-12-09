@@ -8,7 +8,6 @@ namespace View.Data
         public IDeleteUsersProfile(HttpClient _http)
         {
             http = _http;
-            http.BaseAddress = new Uri("https://localhost:7170/"); // Replace with your actual API base URL.
 
 
         }
@@ -17,7 +16,6 @@ namespace View.Data
             if (ent != null)
             {
                 var response = await http.PutAsJsonAsync("api/UserProfile/deleteusersprofiledata", ent);
-              //  Console.WriteLine($"{response} Interface");
 
             }
         }

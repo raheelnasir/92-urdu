@@ -1,0 +1,78 @@
+﻿@page "/signupuser"
+@inject NavigationManager nav
+@using View.Authentication
+@using Microsoft.AspNetCore.Mvc
+@using View.Data
+@using View
+@inject ICreateUser iup
+@layout View.Pages.MainPagesCustomLayout.CustomUserLayout
+
+<div class="row" dir="ltr">
+    <div class="col-lg-4 offset-lg-4 pt-4 pb-4 border">
+        <div class="mb-3 text-center">
+            <h3>Signup</h3>
+        </div>
+        <div class="mb-3">
+            <label>User Name</label>
+            <input @bind="model.UserName" class="form-control" placeholder="User Name" />
+        </div>
+        <div class="mb-3">
+            <label>Password</label>
+            <input @bind="model.Password" type="password" class="form-control" placeholder="Password" />
+        </div>
+
+        <div class="mb-3">
+            <label>First Name</label>
+            <input @bind="model.FirstName" class="form-control" placeholder="First Name" />
+        </div>
+
+        <div class="mb-3">
+            <label>Last Name</label>
+            <input @bind="model.LastName" class="form-control" placeholder="Last Name" />
+        </div>
+
+        <div class="mb-3">
+            <label>Email Address</label>
+            <input @bind="model.EmailAddress" class="form-control" placeholder="Email Address" />
+        </div>
+
+
+
+        <p style="color:red">@outputMessage</p>
+        <div class="mb-3 d-grid gap-2">
+            <button @onclick="SignupUser" class="btn btn-primary">Sign Up</button>
+
+            <a href="/login">Already have an account? Login here.</a>
+        </div>
+    </div>
+</div>
+
+@code {
+
+    string outputMessage = "";
+    Entities.EntUserProfile model = new Entities.EntUserProfile();
+
+    public async Task SignupUser()
+    {
+        try
+        {
+            Random rand = new Random();
+            model.UId = rand.Next(100000, 999999);
+            var response = await iup.CreateUser(model);
+            outputMessage = response.Message;
+            Console.WriteLine($"Hiii");
+
+            nav.NavigateTo("/login", true);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error during signup: {ex.Message}");
+            outputMessage = $" Sign Up Failed : {ex.Message}";
+
+        }
+    }
+
+
+
+
+}

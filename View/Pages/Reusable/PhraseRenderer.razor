@@ -1,0 +1,56 @@
+﻿<div class="row">
+    <div class="mb-4 ">
+
+        <div class="d-flex">
+        @foreach (var word in Misra1.Split(' '))
+        {
+            <div class="m-1 urdu h3">
+                <button type="button" @onclick="()=>GetMeaning(word)" class="urdu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    @word
+                </button>
+                <div class="dropdown-menu mt-1 small">
+
+                    <a class="dropdown-item urdu" data-toggle="popover" title="@word" data-content="@Meaning">
+                        @Meaning
+                    </a>
+                </div>
+            </div>
+        }
+        </div>
+
+        <br />
+        <div class="d-flex">
+
+        @foreach (var word2 in Misra2.Split(' ') )
+        {
+            <div class="m-1 urdu h3">
+                <button type="button" @onclick="()=>GetMeaning(word2)" class="urdu " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    @word2
+                </button>
+                <div class="dropdown-menu m-1">
+
+                    <a class="dropdown-item urdu" @onclick="()=>GetMeaning(word2)" data-toggle="popover" title="@word2" data-content="@Meaning">
+                        @Meaning
+                    </a>
+                </div>
+            </div>
+        }
+        </div>
+    </div>
+</div>
+
+
+@code {
+    [Parameter] public string? Misra1 { get; set; }
+    [Parameter] public string? Misra2 { get; set; }
+    public string? Meaning { get; set; }
+
+    public async Task GetMeaning(string word)
+    {
+        Meaning = await DALWordDictionary.GetWordMeaning(word);
+        if (string.IsNullOrEmpty(Meaning))
+        {
+            Meaning = "Meaning Not Found";
+        }
+    }
+}

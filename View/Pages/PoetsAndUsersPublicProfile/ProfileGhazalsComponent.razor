@@ -1,0 +1,19 @@
+﻿
+<div class="d-flex flex-column">
+    @foreach (var obj in GhazalDetail)
+    {
+        <a href="ghazal/@obj.CId"> @obj.ContentName</a>
+    }
+</div>
+
+@code {
+    [Parameter] public int UId { get; set; }
+    List<Entities.EntUserContent> GhazalDetail = new List<Entities.EntUserContent>();
+
+
+    protected async override Task OnInitializedAsync()
+    {
+        GhazalDetail = await DAL.DALUserGhazalByUId.GetUserGhazalByUId(Convert.ToInt32(UId));
+
+    }
+}

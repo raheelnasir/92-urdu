@@ -1,0 +1,35 @@
+﻿@inject NavigationManager nvm
+
+<div class="col-md-3">
+    <div class="card">
+        <div class="card-body text-center">
+            <img src="@ImageUrl" width="80" style="border-radius:50%;" alt="">
+            <p class="small urdu m-0">
+                @FullName
+            </p>
+            <p class="small urdu m-0 text-black-50">
+                @City <span class="oi oi-map-marker" />
+            </p>
+            <button class="btn btn-outline-primary btn-sm" @onclick="() => MakeNavigation(UId)">View Profile</button>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string FullName { get; set; }
+
+    [Parameter]
+    public string City { get; set; }
+
+    [Parameter]
+    public string UId { get; set; }
+
+    [Parameter]
+    public string ImageUrl { get; set; }
+
+    public void MakeNavigation(string uid)
+    {
+        nvm.NavigateTo($"userprofile/{uid}");
+    }
+}

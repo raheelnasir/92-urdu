@@ -39,7 +39,7 @@ namespace WebAPI.Controllers
                 if (!string.IsNullOrEmpty(data))
                 {
                     // Account created successfully
-                 //   Console.WriteLine($"{data} OUTPUT PARAMETER OUTPUT");
+                    //   Console.WriteLine($"{data} OUTPUT PARAMETER OUTPUT");
                     return Ok(new { Message = data, Data = "sda" });
                 }
                 else
@@ -60,6 +60,7 @@ namespace WebAPI.Controllers
         [Route("createaccount")]
         public async Task<IActionResult> CreateUser(EntUserProfile eup)
         {
+            Console.WriteLine("HI Controller");
             if (eup != null)
             {
                 SqlParameter[] sp = new SqlParameter[]
@@ -82,13 +83,11 @@ namespace WebAPI.Controllers
 
                 if (!string.IsNullOrEmpty(data))
                 {
-                    // Account created successfully
-               //     Console.WriteLine($"{data} OUTPUT PARAMETER OUTPUT");
+
                     return Ok(new { Message = data, Data = "sda" });
                 }
                 else
                 {
-                    // Handle the case when outputMessage is null (no error message)
                     return BadRequest(new { Message = "User registration failed", Data = "sad" });
                 }
             }
@@ -108,7 +107,7 @@ namespace WebAPI.Controllers
             {
                 return BadRequest("Role parameter is required.");
             }
-         //   Console.WriteLine(role);
+            //   Console.WriteLine(role);
             var response = await DALUsersData.GetUsersData(role);
 
             if (response == null)
@@ -117,7 +116,7 @@ namespace WebAPI.Controllers
             }
             else
             {
-              //  Console.WriteLine($"Controller: {response}");
+                //  Console.WriteLine($"Controller: {response}");
                 return Ok(response);
             }
         }
@@ -136,12 +135,12 @@ namespace WebAPI.Controllers
                     new SqlParameter("@isactive", eup.IsActive)
                 };
                 await MyCrud.CRUD("sp_UpdateUsersProfileData", sp);
-            //    Console.WriteLine($" Controller {sp}");
+                //    Console.WriteLine($" Controller {sp}");
 
             }
         }
-       
-        
+
+
         [HttpPut]
         [Route("deleteusersprofiledata")]
         public async Task DeleteUsersProfileData(EntUserProfile eup)
@@ -155,7 +154,21 @@ namespace WebAPI.Controllers
                     new SqlParameter("@role", eup.Role)
                 };
                 await MyCrud.CRUD("sp_DeleteUsersProfile", sp);
-           //     Console.WriteLine($" Controller {sp}");
+                //     Console.WriteLine($" Controller {sp}");
+
+            }
+        }
+        [HttpPost]
+        [Route("uploaduserprofileimage")]
+        public async Task UploadImage(string path)
+        {
+            if (path != "")
+            {
+                SqlParameter[] sp = new SqlParameter[]
+                {
+                    new SqlParameter("@path",path),
+                };
+                await MyCrud.CRUD("SP_UploadImage", sp);
 
             }
         }

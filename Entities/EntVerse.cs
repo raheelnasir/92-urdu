@@ -11,5 +11,6 @@ namespace Entities
     public int ContentId { get; set; }
     public string? Verse1 { get; set; }
     public string? Verse2 { get; set; }
+    public string? Fullname { get; set; }
     }
 }

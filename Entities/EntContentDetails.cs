@@ -11,6 +11,5 @@ public class EntContentDetails
     {
         public int UId { get; set; }
         public string? ContentName {  get; set; }
-        public char ContentType { get; set; }
     }
 }

@@ -1,0 +1,19 @@
+﻿
+
+<div class="mt-5 p-2 d-flex flex-column">
+    @foreach (var obj in PoemDetail)
+    {
+        <a href="poem/@obj.CId" style="color:indigo; font-weight:600; font-size:25px; " class="urdu"> @obj.ContentName</a>
+    }
+</div>
+
+@code {
+    [Parameter] public int UId { get; set; }
+
+    List<Entities.EntUserContent> PoemDetail = new List<Entities.EntUserContent>();
+    protected async override Task OnInitializedAsync()
+    {
+        PoemDetail = await DAL.DALUserPoemByUId.GetUserPoemByUId(Convert.ToInt32(UId));
+
+    }
+}

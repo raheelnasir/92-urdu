@@ -1,0 +1,21 @@
+﻿@page "/userprofile/{UId}"
+@layout View.Pages.MainPagesCustomLayout.CustomUserLayout
+
+<link rel="stylesheet" href="~/css/site.css" />
+
+<section class="d-flex flex-column ">
+
+    <ProfileHeaderComponent UId="Convert.ToInt32(UId)" />
+    <ProfileAboutComponent UId="Convert.ToInt32(UId)" />
+
+    <div class="poets-page-category col-md-12">
+        <ProfilePoemsComponent UId="Convert.ToInt32(UId)" />
+        <ProfileGhazalsComponent UId="Convert.ToInt32(UId)" />
+    </div>
+
+</section>
+
+@code {
+    [Parameter] public string? UId { get; set; }
+
+}

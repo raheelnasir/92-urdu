@@ -1,0 +1,64 @@
+﻿@inject NavigationManager NVM
+
+<div class="mt-5">
+
+    <div class="d-flex flex-column p-1 mt-3">
+        <div class="d-flex flex-row m-auto p-1 w-100" style="box-shadow: rgba(9, 30, 66, 0.25) 0px 0px 1px, rgba(9, 30, 66, 0.13) 0px 0px 0px 1px;">
+            <span class="oi oi-magnifying-glass m-2 mt-1 mb-1 p-1" style="font-size: 16px; color: dimgray;" @onclick="UpdateSearch" />
+            <input type="search" class="bg-transparent w-100  p-1" style="font-size: 15px; outline: none" @bind="PoetSearchBar" placeholder="شاعر کو تلاش کریں۔" />
+        </div>
+        @if (IsSearching)
+        {
+            <div class="d-flex align-items-center justify-content-center" style="height: 50vh;">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        }
+        else if (Poets.Count == 0 && !IsSearching)
+        {
+            <div class="text-danger" style="font-size: 22px;">
+                Not Found
+            </div>
+        }
+        else
+        {
+            <div class="mt-5">
+                <div class="row">
+                    @foreach (var poet in Poets)
+                    {
+                        <PoetsCard ImageUrl="img/profile.png" City="@poet.City" FullName="@poet.FullName" UId="@poet.UId.ToString()" />
+
+                    }
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@code {
+    List<Entities.EntPoetsInSearchCategory> Poets = new List<Entities.EntPoetsInSearchCategory>();
+
+    bool IsSearching = false;
+    public string PoetSearchBar { get; set; } = ""; // Initialize to an empty string
+
+    public void MakeNavigation(string uid)
+    {
+        NVM.NavigateTo($"userprofile/{uid}");
+    }
+
+    private async Task UpdateSearch()
+    {
+        IsSearching = true;
+        await Task.Delay(500);
+        Poets = await DAL.DALPoetsSearch.GetPoetsBySearch(PoetSearchBar, null);
+        IsSearching = false;
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        IsSearching = true;
+        Poets = await DAL.DALPoetsSearch.GetPoetsBySearch("", null);
+        IsSearching = false;
+    }
+}

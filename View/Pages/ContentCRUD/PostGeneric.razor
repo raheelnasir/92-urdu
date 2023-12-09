@@ -1,0 +1,42 @@
+﻿@using Entities
+<div class="mb-3 text-center">
+    <h3>Ghazal</h3>
+</div>
+
+<div class="col-lg-4 offset-lg-4 pt-4 pb-4  m-auto mt-5 border" dir="rtl">
+    <div class="mb-3">
+        <label>
+            Ghazal Name
+        </label>
+        <input type="name" @bind="ECD.ContentName" class="form-control" placeholder="Ghazal Name" />
+    </div>
+    <hr />
+    <div class="mb-3">
+        <label>
+            Misra 1
+        </label>
+        <input type="text" class=" form-control" @bind="newInputValue" />
+    </div>
+    <div class="mb-3">
+        <label>
+            Misra 2
+        </label>
+        <input type="text" class=" form-control" @bind="newInputValue2" />
+    </div>
+
+    @Content
+
+</div>
+@code {
+    public class InputModel
+    {
+        public string? Value1 { get; set; }
+        public string? Value2 { get; set; }
+    }
+
+    private List<InputModel> inputValues = new List<InputModel>();
+    private string newInputValue = "";
+    private string newInputValue2 = "";
+    EntContentDetails ECD = new EntContentDetails();
+    [Parameter] public RenderFragment Content { get; set; }
+}

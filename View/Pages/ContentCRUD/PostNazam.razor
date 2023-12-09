@@ -1,0 +1,95 @@
+﻿@layout CustomUserLayout
+@attribute [Authorize(Roles = "Poet")]
+@inject AuthenticationStateProvider asp;
+@inject ISetNazamDetails isd;
+@inject IPostNazamVerses ipv;
+
+
+
+<div class="row">
+    <div class="col-lg-8 offset-2">
+        <div class="mb-3">
+
+            <input type="name" @bind="ECD.ContentName" class="form-control" placeholder="Poem Name" />
+        </div>
+        <div>
+            @foreach (var inputValue in inputValues)
+            {
+
+                <div class="input-group mb-2">
+                    <button @onclick="() => RemoveInputValue(inputValue)" type="button" class="btn btn-outline-danger">X</button>
+
+                    <input type="text" placeholder="Misra 1" class="form-control" @bind="inputValue.Value1" />
+                    <input type="text" placeholder="Misra 2" class="form-control" @bind="inputValue.Value2" />
+                </div>
+            }
+        </div>
+        <div>
+            <button @onclick="AddInputValue" class="btn btn-outline-success">Add</button>
+
+            <button @onclick="PostSher" class="btn btn-success">Post Nazam</button>
+        </div>
+    </div>
+</div>
+
+@code {
+    public class Verses
+    {
+        public string? Verse1;
+        public string? Verse2;
+    };
+    private List<InputModel> inputValues = new List<InputModel>();
+    private string newInputValue = "";
+    private string newInputValue2 = "";
+    private void AddInputValue()
+    {
+       
+            inputValues.Add(new InputModel { Value1 = newInputValue, Value2 = newInputValue2 });
+         
+
+        
+    }
+
+    private void RemoveInputValue(InputModel inputValue)
+    {
+        inputValues.Remove(inputValue);
+    }
+
+    EntContentDetails ECD = new EntContentDetails();
+
+    public async Task PostSher()
+    {
+        try
+        {
+            Random rand = new Random();
+            var auth = await asp.GetAuthenticationStateAsync();
+            var uid = auth.User.FindFirst("UId")?.Value;
+            ECD.UId = Convert.ToInt32(uid);
+            int CID = await isd.SetNazamDetails(ECD);
+            Console.WriteLine(CID);
+
+            foreach (var input in inputValues)
+            {
+
+                EntVerse obj = new EntVerse();
+                obj.Verse1 = input.Value1;
+                obj.Verse2 = input.Value2;
+
+                obj.ContentId = Convert.ToInt32(CID);
+                await ipv.PostNazamVerses(obj);
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error : {ex}");
+        }
+    }
+
+
+    public class InputModel
+    {
+        public string? Value1 { get; set; }
+        public string? Value2 { get; set; }
+    }
+
+}

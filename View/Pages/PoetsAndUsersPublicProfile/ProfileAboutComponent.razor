@@ -1,0 +1,40 @@
+﻿
+<div class="pt-5 p-3 d-flex flex-column">
+    <div class="d-flex flex-column">
+        <h2 style="border-bottom:1px solid dimgray; width:max-content; font-weight:700;" class="urdu">
+            @UserAbout.FullName
+        </h2>
+        <h6 style="font-size:18px" class="urdu">
+            @UserAbout.Biography
+        </h6>
+    </div>
+
+    <div class="d-flex flex-row justify-content-left pt-4   ">
+        <div class="d-flex  ">
+            <span class="oi oi-map-marker m-auto" style="font-size:19px;" />
+            <span class=" m-auto mt-2 mb-1" style="font-size:18px"> @UserAbout.City</span>
+
+        </div>
+        <div class="d-flex mt-0 mb-0 m-4 ">
+            <span class="oi oi-calendar m-auto" style="font-size:19px;" />
+            @if (UserAbout.DateOfBirth != null || UserAbout.DateOfBirth != "")
+            {
+                <span class=" m-auto mt-2 mb-1" style="font-size:18px">
+                    @UserAbout.DateOfBirth.ToString()?.Split(' ')[0]
+                </span>
+            }
+        </div>
+    </div>
+</div>
+
+
+@code {
+    [Parameter] public int UId { get; set; }
+    Entities.EntUserAbout UserAbout = new Entities.EntUserAbout();
+
+    protected async override Task OnInitializedAsync()
+    {
+        UserAbout = await DAL.DALUserByID.GetUserById(Convert.ToInt32(UId));
+
+    }
+}

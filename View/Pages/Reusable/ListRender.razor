@@ -1,0 +1,16 @@
+﻿@typeparam TList
+
+<div>
+    @if (ContentList != null && ContentList.Any())
+    {
+        @foreach (TList item in ContentList)
+        {
+            @Data(item)
+        }
+    }
+</div>
+
+@code {
+    [Parameter] public List<TList>? ContentList { get; set; }
+    [Parameter] public RenderFragment<TList> Data { get; set; }
+}

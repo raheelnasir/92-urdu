@@ -33,13 +33,10 @@ namespace View.Data
             {
                 // If the request was successful, deserialize the response content into a SignupResponse object
                 var responseContent = await response.Content.ReadFromJsonAsync<SignupResponse>();
-                // TO GET THE JSON DATA FROM THE 
-               // Console.WriteLine($"Interface {responseContent.Data} --- {responseContent.Message}");
-                return responseContent;
+               return responseContent;
             }
             else
             {
-                // Handle the case when there's an error, return an error message
                 return new SignupResponse { Message = "Error during signup", Data = null };
             }
         }

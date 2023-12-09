@@ -1,0 +1,55 @@
+﻿@page "/fileupload"
+@inject IWebHostEnvironment env
+@inject AuthenticationStateProvider asp;
+@inject IUploadImage iup;
+
+<form @onsubmit="OnSubmit">
+    <InputFile OnChange="OnInputFileChange" />
+    <br />
+    <h3>@Message</h3>
+
+    <button class="btn btn-success" type="submit">Upload</button>
+</form>
+
+@code {
+
+    public string Message = "";
+    IReadOnlyList<IBrowserFile>? selectedFiles;
+
+    private void OnInputFileChange(InputFileChangeEventArgs e)
+    {
+        selectedFiles = e.GetMultipleFiles();
+        Message = $"{selectedFiles.Count} file(s) selected";
+        this.StateHasChanged();
+    }
+
+    private async void OnSubmit()
+    {
+        var User = await asp.GetAuthenticationStateAsync();
+        var UserName = User.User.Identity.Name?.ToString();
+        var UId = User.User.FindFirst("UId")?.Value.ToString();
+
+        foreach (var file in selectedFiles)
+        {
+            Stream stream = file.OpenReadStream(maxAllowedSize: 10000000);
+
+            // Get file extension
+            var fileExtension = Path.GetExtension(file.Name);
+
+            // Generate a unique identifier (GUID)
+            var guid = Guid.NewGuid().ToString();
+
+            // Append GUID, file name, and extension to the path
+            var path = $"{env.WebRootPath}\\ProfileImages\\{UserName}{UId}{guid}{fileExtension}";
+            iup.UploadImage(path);
+            Console.WriteLine(path);
+            FileStream fs = File.Create(path);
+            await stream.CopyToAsync(fs);
+            stream.Close();
+            fs.Close();
+        }
+
+        Message = $"{selectedFiles.Count} file(s) uploaded";
+        this.StateHasChanged();
+    }
+}
