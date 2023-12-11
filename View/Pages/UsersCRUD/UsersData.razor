@@ -1,7 +1,7 @@
 ﻿@page "/usersdata"
 @inject IGetUsersData iup
 @inject AuthenticationStateProvider aspas
-@inject IUpdateUsersProfileData iupd
+@inject IUpdateUsersProfileDataStatus iupd
 @attribute [Authorize(Roles = "Administrator,Editor,Chief Editor")]
 @inject IDeleteUsersProfile iudp
 <div style="overflow:hidden; max-width:80vw;">

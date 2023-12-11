@@ -1,17 +1,7 @@
-﻿@using View.Data
-@using WebAPI
-@inject IPostPhrases ipp
+﻿@inject IPostPhrases ipp
 @attribute [Authorize(Roles = "Poet")]
-@layout View.Pages.MainPagesCustomLayout.CustomUserLayout
+@layout CustomUserLayout
 @inject AuthenticationStateProvider asp;
-@using Entities
-@using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
-@using Authentication
-@using Microsoft.AspNetCore.Components.Authorization;
-@using Microsoft.Identity.Client;
-@using Microsoft.IdentityModel.Tokens;
-@using System.Diagnostics.Eventing.Reader;
-@using System.Security.Claims;
 
 
 <div class="mb-3 text-center">

@@ -9,7 +9,7 @@ namespace View.Data
         public IPostPhrases(HttpClient _http)
         {
             http= _http;
-            http.BaseAddress = new Uri("https://localhost:7170/");
+            http.BaseAddress = DomainHelper.GetDomain();
         }
         public async Task PostPhrases(EntPhrases eup)
         {

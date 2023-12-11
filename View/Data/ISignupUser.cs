@@ -12,7 +12,7 @@ namespace View.Data
         public ISignupUser(HttpClient http)
         {
             _http = http;
-            _http.BaseAddress = new Uri("https://localhost:7170/"); // Replace with your actual API base URL.
+            http.BaseAddress = DomainHelper.GetDomain();
         }
 
         public Task<SignupResponse> CreateUser(EntUserProfile cup)

@@ -9,7 +9,7 @@ namespace View.Data
         public ISetNazamDetails(HttpClient _http)
         {
             http = _http;
-            http.BaseAddress = new Uri("https://localhost:7170/"); // Replace with your actual API base URL.
+            http.BaseAddress = DomainHelper.GetDomain();
 
         }
 

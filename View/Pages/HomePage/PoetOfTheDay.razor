@@ -7,12 +7,13 @@
                 <div style="height:150px; width:150px; background-image:url(https://i.pinimg.com/550x/83/55/c3/8355c3a8be5589a2f21b2291b1e6b202.jpg); background-position:center; background-size:cover; border-radius:100%;margin:0 auto"> </div>
             </div>
             <p>@Poet.FullName</p>
-            <p class="lead">
-                <div class="urdu">
-                    @Poet.Verse1<br />
-                    @Poet.Verse2
+            <p class="lead  d-flex flex-column">
+                <PhraseRenderer Misra1="@Poet.Verse1" Misra2="@Poet.Verse2" />
+
+                <div class="urdu mt-2">
+                    @Poet.City
+
                 </div>
-                @Poet.City
             </p>
 
         </div>

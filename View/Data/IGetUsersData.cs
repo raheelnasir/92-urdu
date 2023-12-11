@@ -15,6 +15,8 @@ namespace View.Data
         public IGetUsersData(HttpClient _http)
         {
             http = _http;
+            http.BaseAddress = DomainHelper.GetDomain();
+
         }
 
         public async Task<List<EntUserProfile>> GetUsersData(string role)

@@ -24,10 +24,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGVudENSVURcUG9zdENvbnRlbnRNYWluUGFnZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rearms/Desktop/Rekhta/View/Pages/ContentCRUD/PostGeneric.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGVudENSVURcUG9zdEdlbmVyaWMucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Rearms/Desktop/Rekhta/View/Pages/ContentCRUD/PostGhazal.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGVudENSVURcUG9zdEdoYXphbC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -64,6 +60,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFpblBhZ2VzQ3VzdG9tTGF5b3V0XEN1c3RvbVVzZXJMYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/PhrasePage/PhrasePageMain.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGhyYXNlUGFnZVxQaHJhc2VQYWdlTWFpbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Rearms/Desktop/Rekhta/View/Pages/PoemDisplayPage/RenderNazam.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9lbURpc3BsYXlQYWdlXFJlbmRlck5hemFtLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -92,8 +92,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9ldHNBbmRVc2Vyc1B1YmxpY1Byb2ZpbGVcUHJvZmlsZVBvZW1zQ29tcG9uZW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rearms/Desktop/Rekhta/View/Pages/PoetsPrivateProfileCRUD/PoetProfile.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9ldHNQcml2YXRlUHJvZmlsZUNSVURcUG9ldFByb2ZpbGUucmF6b3I=
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/PoetsPrivateProfileCRUD/UpdatePoetProfile.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9ldHNQcml2YXRlUHJvZmlsZUNSVURcVXBkYXRlUG9ldFByb2ZpbGUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Rearms/Desktop/Rekhta/View/Pages/PoetsSearchPage/PoetsCard.razor]

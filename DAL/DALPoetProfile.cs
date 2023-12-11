@@ -36,7 +36,11 @@ namespace DAL
                                 userProfile.FirstName = sdr["FirstName"].ToString();
                                 userProfile.LastName = sdr["LastName"].ToString();
                                 userProfile.EmailAddress = sdr["EmailAddress"].ToString();
+                                userProfile.Gender = sdr["Gender"].ToString();
+                                userProfile.UserBio = sdr["UserBio"].ToString();
+
                                 userProfile.PhoneNumber = sdr["PhoneNumber"].ToString();
+                                userProfile.ProfileImage = sdr["ProfileImg"].ToString();
                                 if (DateTime.TryParse(sdr["DateOfBirth"].ToString(), out DateTime dateOfBirth))
                                 {
                                     userProfile.DateOfBirth = dateOfBirth;

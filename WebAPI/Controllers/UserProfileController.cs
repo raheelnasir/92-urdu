@@ -3,6 +3,7 @@ using DAL;
 using Microsoft.AspNetCore.Mvc;
 using System.Data.SqlClient;
 using System.Threading.Tasks;
+using System.IO;
 
 
 namespace WebAPI.Controllers
@@ -160,17 +161,53 @@ namespace WebAPI.Controllers
         }
         [HttpPost]
         [Route("uploaduserprofileimage")]
-        public async Task UploadImage(string path)
+        public async Task UploadImage(EntProfileImage eup)
         {
-            if (path != "")
+            if (eup != null)
             {
                 SqlParameter[] sp = new SqlParameter[]
                 {
-                    new SqlParameter("@path",path),
+                    new SqlParameter("@path",eup.ProfileImage),
+                                        new SqlParameter("@uid",eup.UId),
+
                 };
                 await MyCrud.CRUD("SP_UploadImage", sp);
 
             }
+        }
+
+        [HttpPut]
+        [Route("updateuserprofileinformation")]
+        public async Task<string> UpdateProfileInformation(EntUserProfile eup)
+        {
+            if (eup != null)
+            {
+                SqlParameter[] sp = new SqlParameter[]
+                {
+                    new SqlParameter("@uid",eup.UId),
+                    new SqlParameter("@username", eup.UserName.ToString()),
+                    new SqlParameter("@firstname",eup.FirstName.ToString()),
+                    new SqlParameter("@lastname",eup.LastName.ToString()),
+                    new SqlParameter("@dateofbirth",eup.DateOfBirth.ToString()),
+                    new SqlParameter("@city",eup.City.ToString()),
+                    new SqlParameter("@area",eup.Area.ToString()),
+                    new SqlParameter("@number",eup.PhoneNumber.ToString()),
+                    new SqlParameter("@location",eup.Location.ToString()),
+                    new SqlParameter("@email",eup.EmailAddress.ToString()),
+                    new SqlParameter("@password",eup.Password.ToString()),
+                    new SqlParameter("@userbio",eup.UserBio.ToString()),
+                   new SqlParameter("@gender",eup.Gender.ToString()),
+
+
+                };
+                var message = await MyCrud.CRUD("SP_UpdateUserProfileInformation", sp);
+                return message;
+            }
+            else
+            {
+                return "Invalid Request";
+            }
+
         }
     }
 }

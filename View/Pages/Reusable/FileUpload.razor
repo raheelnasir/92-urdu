@@ -3,15 +3,15 @@
 @inject AuthenticationStateProvider asp;
 @inject IUploadImage iup;
 
-<form @onsubmit="OnSubmit">
-    <InputFile OnChange="OnInputFileChange" />
-    <br />
-    <h3>@Message</h3>
+<form @onsubmit="OnSubmit" class="d-flex mb-3">
+    <InputFile class="form-control m-0 " id="formFileLg" OnChange="OnInputFileChange" />
+    <button class="btn btn-primary m-0 float-right" type="submit">Update Image</button>
 
-    <button class="btn btn-success" type="submit">Upload</button>
 </form>
+<p>@Message</p>
 
 @code {
+    [Parameter] public string prevPath { get; set; }
 
     public string Message = "";
     IReadOnlyList<IBrowserFile>? selectedFiles;
@@ -25,31 +25,50 @@
 
     private async void OnSubmit()
     {
-        var User = await asp.GetAuthenticationStateAsync();
-        var UserName = User.User.Identity.Name?.ToString();
-        var UId = User.User.FindFirst("UId")?.Value.ToString();
 
-        foreach (var file in selectedFiles)
+        if (selectedFiles == null || selectedFiles.Count == 0)
         {
-            Stream stream = file.OpenReadStream(maxAllowedSize: 10000000);
+            // Handle the case where no file is selected
+            Message = "No file selected";
+            return;
+        }
+        else
+        {
+            var User = await asp.GetAuthenticationStateAsync();
+            var UserName = User.User.Identity.Name?.ToString();
+            var UId = User.User.FindFirst("UId")?.Value.ToString();
+            EntProfileImage eup = new EntProfileImage();
+            foreach (var file in selectedFiles)
+            {
+                Stream stream = file.OpenReadStream(maxAllowedSize: 10000000);
 
-            // Get file extension
-            var fileExtension = Path.GetExtension(file.Name);
+                // Get file extension
+                var fileExtension = Path.GetExtension(file.Name);
 
-            // Generate a unique identifier (GUID)
-            var guid = Guid.NewGuid().ToString();
+                // Generate a unique identifier (GUID)
+                var guid = Guid.NewGuid().ToString();
 
-            // Append GUID, file name, and extension to the path
-            var path = $"{env.WebRootPath}\\ProfileImages\\{UserName}{UId}{guid}{fileExtension}";
-            iup.UploadImage(path);
-            Console.WriteLine(path);
-            FileStream fs = File.Create(path);
-            await stream.CopyToAsync(fs);
-            stream.Close();
-            fs.Close();
+                // Append GUID, file name, and extension to the path
+                var path = $"{env.WebRootPath}\\ProfileImages\\{UserName}{UId}{guid}{fileExtension}";
+                Console.WriteLine(env.WebRootPath);
+                Console.WriteLine(path);
+                eup.UId = UId;
+                eup.ProfileImage = path;
+                iup.UploadImage(eup);
+                Console.WriteLine(path);
+                FileStream fs = File.Create(path);
+                if (prevPath != null || prevPath != "")
+                {
+                    File.Delete(prevPath);
+                }
+                await stream.CopyToAsync(fs);
+                stream.Close();
+                fs.Close();
+            }
+
+            Message = $"{selectedFiles.Count} file(s) uploaded";
+            this.StateHasChanged();
         }
 
-        Message = $"{selectedFiles.Count} file(s) uploaded";
-        this.StateHasChanged();
     }
 }

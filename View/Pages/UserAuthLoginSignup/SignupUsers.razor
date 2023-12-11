@@ -1,14 +1,10 @@
 ﻿@page "/signupuser"
 @inject NavigationManager nav
-@using View.Authentication
-@using Microsoft.AspNetCore.Mvc
-@using View.Data
-@using View
 @inject ICreateUser iup
-@layout View.Pages.MainPagesCustomLayout.CustomUserLayout
+@layout CustomUserLayout
 
-<div class="row" dir="ltr">
-    <div class="col-lg-4 offset-lg-4 pt-4 pb-4 border">
+<div class="row w-100 align-items-center" dir="ltr">
+    <div class="col-lg-4 offset-lg-4 pt-4 pb-4 border mt-4">
         <div class="mb-3 text-center">
             <h3>Signup</h3>
         </div>
@@ -36,19 +32,15 @@
             <input @bind="model.EmailAddress" class="form-control" placeholder="Email Address" />
         </div>
 
-
-
         <p style="color:red">@outputMessage</p>
         <div class="mb-3 d-grid gap-2">
             <button @onclick="SignupUser" class="btn btn-primary">Sign Up</button>
-
             <a href="/login">Already have an account? Login here.</a>
         </div>
     </div>
 </div>
 
 @code {
-
     string outputMessage = "";
     Entities.EntUserProfile model = new Entities.EntUserProfile();
 
@@ -56,23 +48,55 @@
     {
         try
         {
+            // Check if all required fields are filled
+            if (string.IsNullOrEmpty(model.UserName) ||
+                string.IsNullOrEmpty(model.Password) ||
+                string.IsNullOrEmpty(model.FirstName) ||
+                string.IsNullOrEmpty(model.LastName) ||
+                string.IsNullOrEmpty(model.EmailAddress))
+            {
+                outputMessage = "Please fill in all the required fields.";
+                return;
+            }
+
+            // Validate that First Name and Last Name are in Urdu
+            if (!IsUrdu(model.FirstName) || !IsUrdu(model.LastName))
+            {
+                outputMessage = "First Name and Last Name must be in Urdu.";
+                return;
+            }
+
             Random rand = new Random();
             model.UId = rand.Next(100000, 999999);
+
             var response = await iup.CreateUser(model);
             outputMessage = response.Message;
-            Console.WriteLine($"Hiii");
 
-            nav.NavigateTo("/login", true);
+            // Check if the response is successful before navigating
+            if (string.IsNullOrEmpty(response.Message))
+            {
+                // Navigate to the login page only if the response is successful
+                nav.NavigateTo("/login", true);
+            }
+            else
+            {
+                // Handle unsuccessful response scenarios
+                outputMessage = $"Sign Up Failed: {response.Message}";
+            }
         }
         catch (Exception ex)
         {
+            // Log the exception
             Console.WriteLine($"Error during signup: {ex.Message}");
-            outputMessage = $" Sign Up Failed : {ex.Message}";
-
+            outputMessage = $"Sign Up Failed: {ex.Message}";
         }
     }
 
-
-
-
+    // Custom method to check if a string contains Urdu characters
+    bool IsUrdu(string input)
+    {
+        // Customize the regular expression based on your Urdu character set
+        string urduPattern = @"[\u0600-\u06FF]+";
+        return System.Text.RegularExpressions.Regex.IsMatch(input, urduPattern);
+    }
 }

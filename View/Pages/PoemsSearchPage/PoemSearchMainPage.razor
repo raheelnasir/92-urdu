@@ -9,69 +9,10 @@
                 <h3 class="fw-bolder urdu text-lg-end">نظموں کی فہرست</h3>
             </div>
         </div>
-
-        <div class="mt-5">
-            <div class="d-flex flex-column p-1 mt-3">
-                <div class="d-flex flex-row m-auto p-1 w-100">
-                    <span class="oi oi-magnifying-glass m-2 mt-1 mb-1 p-1" style="font-size: 16px; color: dimgray;" @onclick="UpdateSearch" />
-                    <input type="search" class="form-control bg-transparent" style="font-size: 15px; outline: none; direction: rtl;" @bind="PoetSearchBar" placeholder=" کو تلاش کریں۔  نظموں" />
-                    <input type="search" class="form-control bg-transparent" style="font-size: 15px; outline: none; direction: rtl;" @bind="PoemSearchBar" placeholder=" کو تلاش کریں۔  کلام" />
-                </div>
-
-                @if (IsSearching)
-                {
-                    <div class="d-flex align-items-center justify-content-center mt-3">
-                        <div class="spinner-border" role="status">
-                            <span class="visually-hidden">Loading...</span>
-                        </div>
-                    </div>
-                }
-                else if (Poets.Count == 0 && !IsSearching)
-                {
-                    <div class="text-danger mt-3" style="font-size: 22px; text-align: center;">
-                        Not Found
-                    </div>
-                }
-                else
-                {
-                    <div class="mt-5">
-                        <div class="row">
-                            @foreach (var poet in Poets)
-                            {
-                                <!-- Render your poet information here -->
-                            }
-                        </div>
-                    </div>
-                }
-            </div>
-        </div>
+        Coming Soon
     </div>
 </section>
 
 @code {
-    List<Entities.EntPoetsInSearchCategory> Poets = new List<Entities.EntPoetsInSearchCategory>();
 
-    bool IsSearching = false;
-    public string PoetSearchBar { get; set; } = ""; // Initialize to an empty string
-    public string PoemSearchBar { get; set; } = ""; // Initialize to an empty string
-
-    public void MakeNavigation(string uid)
-    {
-        NVM.NavigateTo($"userprofile/{uid}");
-    }
-
-    private async Task UpdateSearch()
-    {
-        IsSearching = true;
-        await Task.Delay(500);
-        Poets = await DAL.DALPoetsSearch.GetPoetsBySearch(PoetSearchBar, PoemSearchBar);
-        IsSearching = false;
-    }
-
-    protected override async Task OnInitializedAsync()
-    {
-        IsSearching = true;
-        Poets = await DAL.DALPoetsSearch.GetPoetsBySearch("", "");
-        IsSearching = false;
-    }
 }

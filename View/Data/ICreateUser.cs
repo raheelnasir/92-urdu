@@ -1,5 +1,4 @@
 ﻿using Entities;
-using System.Data.SqlClient;
 
 namespace View.Data
 {
@@ -9,7 +8,7 @@ namespace View.Data
         public ICreateUser(HttpClient _http)
         {
             http = _http;
-            _http.BaseAddress = new Uri("https://localhost:7170/"); // Replace with your actual API base URL.
+            http.BaseAddress = DomainHelper.GetDomain();
         }
 
         public async Task<SignupResponse> CreateUser(EntUserProfile cup)

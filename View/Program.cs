@@ -16,11 +16,12 @@ builder.Services.AddMudServices();
 builder.Services.AddScoped<ProtectedSessionStorage>();
 builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();
 builder.Services.AddSingleton<UserAccountService>();
-
+builder.Services.AddSingleton<IUploadImage>();
 builder.Services.AddSingleton<ISignupUser>();
 builder.Services.AddHttpClient<IUserProfile, ISignupUser>(
     c => { c.BaseAddress = new Uri("https://localhost:7170/"); }); // Remove '/api/'
 
+builder.Services.AddSingleton<IUpdateUserProfileInformation>();
 builder.Services.AddSingleton<ISetGhazalDetails>();
 builder.Services.AddSingleton<IPostGhazalVerses>();
 
@@ -40,7 +41,7 @@ builder.Services.AddHttpClient<IGetUsersData>(
     c => { c.BaseAddress = new Uri("https://localhost:7170/"); });
 
 
-builder.Services.AddHttpClient<IUpdateUsersProfileData>(
+builder.Services.AddHttpClient<IUpdateUsersProfileDataStatus>(
     c => { c.BaseAddress = new Uri("https://localhost:7170/"); });
 
 

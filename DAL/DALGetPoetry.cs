@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class DALPoetry
+    public static class DALPoetry
     {
-        public static async Task<List<EntVerse>> GetPoetryByPoetID()
+        public static async Task<EntVerse> GetPoetryByPoetID()
         {
-            List<EntVerse> listverse = new List<EntVerse>();
+            EntVerse verse = new EntVerse();
             try
             {
                 using (SqlConnection conn = DBHelper.GetConnection())
@@ -23,26 +23,27 @@ namespace DAL
 
                         using (SqlDataReader sdr = await cmd.ExecuteReaderAsync())
                         {
-                            while (await sdr.ReadAsync())
+
+                            while (sdr.Read())
                             {
-                                EntVerse verse = new EntVerse();
-                                verse.ContentId =Convert.ToInt32(sdr["GhazalId"].ToString());
+                                verse.ContentId = Convert.ToInt32(sdr["GhazalId"].ToString());
                                 verse.Verse1 = sdr["Verse1"].ToString();
                                 verse.Verse2 = sdr["Verse2"].ToString();
                                 verse.Fullname = sdr["FullName"].ToString();
-                                listverse.Add(verse);
                             }
-                            return listverse;
+
+
                         }
                     }
                 }
+                return verse;
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Error In DALPotry: {ex}");
-                return new List<EntVerse>();
+                return verse;
             }
-          
+
         }
     }
 }

@@ -9,7 +9,7 @@ namespace View.Data
         public IPostGhazalVerses(HttpClient _http)
         {
             http = _http;
-            http.BaseAddress = new Uri("https://localhost:7170/");
+            http.BaseAddress = DomainHelper.GetDomain();
 
         }
 

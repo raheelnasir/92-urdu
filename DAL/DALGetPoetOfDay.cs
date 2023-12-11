@@ -31,7 +31,7 @@ namespace DAL
                                 Poet.City = sdr["City"].ToString();
                                 Poet.DateOfBirth = sdr["DateOfBirth"].ToString();
                                 Poet.UId = sdr["UId"].ToString();
-                                Poet.ImgUrl = sdr["UId"].ToString();
+                                Poet.ImgUrl = sdr["ProfileImg"].ToString();
                                 Poet.Verse1 = sdr["Verse1"].ToString();
                                 Poet.Verse2 = sdr["Verse2"].ToString();
                             }

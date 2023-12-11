@@ -33,6 +33,8 @@ namespace DAL
 
                                 UserAbout.FullName = rdr["FullName"].ToString();
                                 UserAbout.City = rdr["City"].ToString();
+                                UserAbout.ProfileImage = rdr["ProfileImg"].ToString();
+
                                 UserAbout.Biography = rdr["UserBio"].ToString();
                                 if(rdr["DateOfBirth"].ToString()=="")
                                 {
