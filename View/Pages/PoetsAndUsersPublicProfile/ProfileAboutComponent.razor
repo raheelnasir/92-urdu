@@ -1,5 +1,5 @@
 ﻿
-<div class="pt-5 p-3 d-flex flex-column">
+<div class="pt-5 p-3 d-flex flex-column urdu  col-md-10">
     <div class="d-flex flex-column">
         <h2 style="border-bottom:1px solid dimgray; width:max-content; font-weight:700;" class="urdu">
             @UserAbout.FullName
@@ -10,16 +10,16 @@
     </div>
 
     <div class="d-flex flex-row justify-content-left pt-4   ">
-        <div class="d-flex  ">
-            <span class="oi oi-map-marker m-auto" style="font-size:19px;" />
-            <span class=" m-auto mt-2 mb-1" style="font-size:18px"> @UserAbout.City</span>
+        <div class="d-flex m-2 ">
+            <span class="oi oi-map-marker m-auto pb-2" style="font-size:19px;" />
+            <span class=" p-1  pb-3 mt-3 urdu h6" style="font-size:18px"> @UserAbout.City</span>
 
         </div>
-        <div class="d-flex mt-0 mb-0 m-4 ">
-            <span class="oi oi-calendar m-auto" style="font-size:19px;" />
+        <div class="d-flex m-2 ">
+            <span class="oi oi-calendar m-auto pb-2" style="font-size:18px;" />
             @if (UserAbout.DateOfBirth != null || UserAbout.DateOfBirth != "")
             {
-                <span class=" m-auto mt-2 mb-1" style="font-size:18px">
+                <span class=" p-1 pb-3 mt-3 urdu h6" style="font-size:18px">
                     @UserAbout.DateOfBirth.ToString()?.Split(' ')[0]
                 </span>
             }

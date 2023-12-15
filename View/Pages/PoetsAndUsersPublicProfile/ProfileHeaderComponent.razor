@@ -1,24 +1,18 @@
-﻿<div class="d-flex flex-row w-100 justify-content-center p-2 " style=" background-image: url('img/profilebackground.jpg'); background-color: rgba(0, 0, 0, 0.5);   background-size: cover;   background-position: center;  background-repeat: no-repeat;height:50vh;">
+﻿<div class="d-flex flex-row w-100 justify-content-center  " style=" background-image: url('img/profilebackground.jpg'); background-color: rgba(0, 0, 0, 0.5);   background-size: cover;   background-position: center;  background-repeat: no-repeat;height:50vh;">
 
-    <div style="border-radius:50%; overflow:hidden;  box-shadow:1px 1px 15px 1px whitesmoke; margin-right:3px;" class="mt-auto mb-auto">
-       @if(UserAbout.ProfileImage == "")
-        {
-            <img src="img/profile.png" width="100%" alt="" />
-
-        }
-        else
+    <div style="border-radius:50%; overflow:hidden;max-width:200px;  box-shadow:1px 1px 15px 1px whitesmoke; margin-right:3px;" class="mt-auto mb-auto">
+        @if (UserAbout.ProfileImage != "")
         {
             <img src="@UserAbout.ProfileImage" width="100%" alt="profile image" />
+
         }
     </div>
 
     <div class="d-flex flex-column m-3 mt-auto mb-auto" style="color:white;">
-        <h4 style="border-bottom:1px solid whitesmoke; font-size:32px;font-weight:700;" class="p-1 urdu">
+        <h4 style="border-bottom:1px solid whitesmoke; font-weight:700;" class="p-1 urdu">
             @UserAbout.FullName
         </h4>
-        <p class="p-1 urdu" style="font-size:17px">
-            @UserAbout.Biography
-        </p>
+
     </div>
 
 </div>

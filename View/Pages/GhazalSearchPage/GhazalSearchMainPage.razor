@@ -4,15 +4,90 @@
 
 <section class="min-vh-100 bg-light pt-5 pb-5">
     <div class="container">
-        <div class="row">
+        <div class="row p-3">
             <div class="col-md-12">
-                <h3 class="fw-bolder urdu text-lg-end">نظموں کی فہرست</h3>
+                <h3 class="fw-bolder urdu float-right">غزلوں کی فہرست</h3>
             </div>
         </div>
-        Coming Soon
+
+        <div class="">
+            <div class="d-flex  p-1  ">
+                <div class=" p-1 w-25 mt-auto mb-auto m-1" style="box-shadow: rgba(9, 30, 66, 0.25) 0px 0px 1px, rgba(9, 30, 66, 0.13) 0px 0px 0px 1px;">
+                    <input type="search" @bind="ghazalname" class=" w-100 urdu  p-1" style=" outline: none" placeholder="غزل کا نام" />
+                </div>
+
+                <div class=" mt-auto mb-auto p-1 w-25 m-1 " style="box-shadow: rgba(9, 30, 66, 0.25) 0px 0px 1px, rgba(9, 30, 66, 0.13) 0px 0px 0px 1px;">
+                    <input type="search" @bind="poetname" class=" w-100 urdu  p-1" style=" outline: none" placeholder="شاعر کا نام" />
+                </div>
+
+                <button type="button" style='display:@(display)' class="btn btn-primary float-left" @onclick="SearchPoems">Search Poems</button>
+                <button class="btn btn-primary float-left" style='display:@(display2)' type="button" dir="ltr" disabled>
+                    <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+
+                    Searching...
+
+                </button>
+            </div>
+            <div class=" p-2 pt-3 ">
+                <div class="float-right bg-light d-flex flex-wrap justify-content-between" style='display:@(display)!important'>
+                    @foreach (var ghazal in GhazalList)
+                    {
+                        <GhazalNazamSearchCard ContentName="@ghazal.GhazalName" PoetName="@ghazal.PoetName" Misra1="@ghazal.Misra1" Misra2="@ghazal.Misra2" PoetImage="@ghazal.PoetImage" Poetid="@ghazal.UId">
+                            <MoveButton>
+                                <a href="ghazal/@ghazal.GhazalId" class="link-primary ">
+                                    View Full Ghazal
+                                </a>
+                            </MoveButton>
+                        </GhazalNazamSearchCard>
+                    }
+                </div>
+
+                <div class="text-center" style='margin-top:15%; display:@(display2)!important; '>
+
+                    <div class="spinner-border m-auto text-center flex" style='width: 3rem; height: 3rem;display:@(display2); ' role="status">
+                        <span class="visually-hidden m-auto">Loading...</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
     </div>
 </section>
 
 @code {
+    public string display = "flex";
+    public string display2 = "none";
+    public string poetname = null;
+    public string ghazalname = null;
+    public string? GhazalName = null;
+    List<EntGhazalSearch> GhazalList = new List<EntGhazalSearch>();
+
+    private async Task SearchPoems()
+    {
+        display = "none";
+        display2 = "";
+
+
+        GhazalList = await DALSearchGhazalByPoetAndGhazalName.GetGhazalByPoetAndGhazalName(poetname,ghazalname);
+
+        await Task.Delay(1500);
+
+        display2 = "none";
+        display = "";
+
+
+    }
+    protected override async Task OnInitializedAsync()
+    {
+        display = "none";
+        display2 = "";
+
+        await base.OnInitializedAsync();
+        GhazalList = await DALSearchGhazalByPoetAndGhazalName.GetGhazalByPoetAndGhazalName(null, null);
+        await Task.Delay(1000);
+        display = "";
+        display2 = "none";
+    }
 
 }

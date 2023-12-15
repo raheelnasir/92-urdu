@@ -3,7 +3,7 @@
 @inject AuthenticationStateProvider ASP;
 @layout CustomUserLayout;
 @inject IUpdateUserProfileInformation Ipi;
-<link rel="stylesheet" href="~/css/site.css"/>
+
 <div class="container ">
     <div class="row justify-content-center mt-5">
         <div class="col-md-6 rounded p-4 shadow">
@@ -37,7 +37,7 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="dateOfBirth" class="float-right urdu">تاریخ پیدائش:</label>
-                        <input id="dateOfBirth" class="form-control urdu" @bind="ent.DateOfBirth" />
+                        <input id="dateOfBirth" type="date" dir="ltr" class="form-control float-right" @bind="ent.DateOfBirth" />
                     </div>
 
                     <div class="form-group col-md-6">
@@ -61,7 +61,7 @@
                 <div class="form-row w-100">
                     <div class="form-group w-100">
                         <label for="area" class="float-right urdu">User Bio</label>
-                        <textarea id="area" type="text" maxlength="250" class="form-control urdu" @bind="ent.UserBio" rows="3" contenteditable="true" />
+                        <textarea id="area" type="text" class="form-control urdu" @bind="ent.UserBio" rows="4" contenteditable="true" />
                     </div>
                 </div>
                 <div class="form-row">
@@ -82,12 +82,11 @@
                 </div>
 
                 <p class="text-danger urdu">@Message</p>
-                <button type="button"  class="btn btn-primary '@(display2)' float-left urdu" @onclick="SaveProfile">
-                 <span class="urdu" style="display:'@(display)'" >
-                        Update
-                 </span>  
-                    </button>
-              
+                <button type="button" style='display:@(display);' class="btn btn-primary float-left" @onclick="SaveProfile">Update</button>
+                <button class="btn btn-primary float-left" style='display:@(display2)' type="button" dir="ltr" disabled>
+                    <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                    Updating...
+                </button>
             </form>
         </div>
     </div>
@@ -95,7 +94,7 @@
 
 @code {
     public string display = "block";
-    public string display2 = "";
+    public string display2 = "none";
     PoetGetParameters pgp = new PoetGetParameters();
     EntUserProfile ent = new EntUserProfile();
     public string Message = "Complete all fields to update your profile";
@@ -112,10 +111,9 @@
     {
 
         display = "none";
-        display2 = "loadinganimation";
-        await Task.Delay(2500);
-        display = "block";
-        display2 = "";
+        display2 = "block";
+
+
 
         // Check if all required fields are filled
         if (string.IsNullOrWhiteSpace(ent.FirstName) ||
@@ -142,6 +140,9 @@
         // Save profile
         var message = await Ipi.UpdateProfileInformation(ent);
         Message = message;
+        await Task.Delay(2000);
+        display = "block";
+        display2 = "none";
         
     }
 

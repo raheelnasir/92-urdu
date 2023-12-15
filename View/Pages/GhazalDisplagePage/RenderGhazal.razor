@@ -1,13 +1,12 @@
 ﻿@page "/ghazal/{ghazalid}"
-
-<DisplayContent ContentName="Bange Dara" PoetName="Raheel">
+@layout CustomUserLayout
+<DisplayContent ContentName="@ContentHolder.ContentName" PoetName="@ContentHolder.PoetName" UId="@ContentHolder.UId.ToString()">
     <Content>
         <ListRender TList="EntGetContent" ContentList="@Content">
             <Data>
                 <div class="d-flex flex-column">
                     <PhraseRenderer Misra1="@context.Verse1" Misra2="@context.Verse2" />
-                    <h6 class="urdu">@ContentName</h6>
-                    <h6 class="urdu">@PoetName</h6>
+                    
                 </div>
             </Data>
         </ListRender>
@@ -17,15 +16,15 @@
 @code {
     [Parameter] public string? ghazalid { get; set; }
     List<EntGetContent> Content = new List<EntGetContent>();
-    string ContentName;
-    string PoetName;
+
+    EntContentDetails ContentHolder = new EntContentDetails();
 
     protected override async Task OnInitializedAsync()
     {
         base.OnInitialized();
         Content = await DALGetGhazalByGhazalId.GetGhazalByGhazalId(ghazalid);
 
-       
+        ContentHolder = await DAL.DALGetPoetAndGhazalNameByGhazalId.GetGhazalAndPoetNameByGhazalId(ghazalid.ToString());
 
         Console.WriteLine($"hi {ghazalid}", Content[0].Verse1);
     }

@@ -1,0 +1,36 @@
+﻿
+<div class="card text-center m-1" style="min-width:245px!important; flex:1;" >
+    <div class="card-header urdu">
+        @ContentName
+    </div>
+    <div class="card-body ">
+        <p class="card-text urdu">@Misra1  </p>
+        <p class="card-text urdu">@Misra2 </p>
+        @MoveButton
+    </div>
+
+    <div class="card-footer text-muted d-flex justify-content-center">
+
+        <div class="mt-auto mb-auto" style="border-radius:50%; overflow:hidden;">
+            <img src='@(PoetImage)' width="25px" height="25px" alt="poet" />
+        </div>
+        <a href="userprofile/@Poetid" class="mt-auto mb-auto p-1 pt-0 pb-0 urdu">
+            @PoetName
+        </a>
+
+    </div>
+</div>
+
+
+@code {
+    [Parameter] public string? ContentName { get; set; }
+    [Parameter] public string? PoetName { get; set; }
+    [Parameter] public string? ContentId { get; set; }
+    [Parameter] public string? PoetImage { get; set; }
+
+    [Parameter] public string? Misra1 { get; set; }
+    [Parameter] public string? Misra2 { get; set; }
+    [Parameter] public string? Poetid { get; set; }
+    [Parameter] public RenderFragment? MoveButton { get; set; }
+
+}

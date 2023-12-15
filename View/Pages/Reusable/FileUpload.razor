@@ -50,17 +50,18 @@
 
                 // Append GUID, file name, and extension to the path
                 var path = $"{env.WebRootPath}\\ProfileImages\\{UserName}{UId}{guid}{fileExtension}";
+                var ImagUrl = $"ProfileImages/{UserName}{UId}{guid}{fileExtension}";
+
+
+
                 Console.WriteLine(env.WebRootPath);
                 Console.WriteLine(path);
                 eup.UId = UId;
-                eup.ProfileImage = path;
+                eup.ProfileImage = ImagUrl;
                 iup.UploadImage(eup);
                 Console.WriteLine(path);
                 FileStream fs = File.Create(path);
-                if (prevPath != null || prevPath != "")
-                {
-                    File.Delete(prevPath);
-                }
+             
                 await stream.CopyToAsync(fs);
                 stream.Close();
                 fs.Close();

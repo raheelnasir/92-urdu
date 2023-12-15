@@ -24,7 +24,7 @@ namespace DAL
                             {
                                 EntGetContent phrase = new EntGetContent();
                                 phrase.Verse1 = sdr["Verse1"].ToString();
-                                phrase.Verse1 = sdr["Verse2"].ToString();
+                                phrase.Verse2 = sdr["Verse2"].ToString();
                                 list.Add(phrase);
                             }
                         }

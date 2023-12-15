@@ -1,15 +1,23 @@
 ﻿
-<div class="d-flex flex-column">
-   @Content
+<div class="d-flex flex-column card m-auto " style="width:max-content">
+    <div class="card-body">
+        @Content
 
-    <h6 class="urdu ">@ContentName</h6>
+    </div>
 
-    <h6 class="urdu ">@PoetName</h6>
+    <div class="card-footer text-center">
+        <h6 class="urdu ">@ContentName</h6>
+
+        <a class="urdu h6" href="userprofile/@UId">@PoetName</a>
+    </div>
+    
 
 </div>
 
 @code {
     [Parameter] public string? PoetName { get; set; }
+    [Parameter] public string? UId { get; set; }
+
     [Parameter] public string? ContentName { get; set; }
     [Parameter] public  RenderFragment? Content{ get; set; }
 }

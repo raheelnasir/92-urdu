@@ -128,6 +128,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmV1c2FibGVcRmlsZVVwbG9hZC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/Reusable/GhazalNazamSearchCard.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmV1c2FibGVcR2hhemFsTmF6YW1TZWFyY2hDYXJkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Rearms/Desktop/Rekhta/View/Pages/Reusable/ListRender.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmV1c2FibGVcTGlzdFJlbmRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

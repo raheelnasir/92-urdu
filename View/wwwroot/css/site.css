@@ -11,20 +11,7 @@ html, body {
     direction: rtl;
 
 }
-.loadinganimation{
-    animation: loading 3s 0s 1;
-    transition:all 3s ease-in-out;
-}
-@keyframes loading{
-    50% {
-        width: 50%;
-        transition: all 3s ease-in-out;
-    }
-    99% {
-        width:100%
-        transition: all 3s ease-in-out;
-    }
-}
+
 h1:focus {
     outline: none;
 }
