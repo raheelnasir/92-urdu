@@ -4,7 +4,8 @@
     {
         public static Uri GetDomain()
         {
-            return new Uri("https://localhost:7170/");
+             return new Uri("https://api.92urdu.com/");
+
         }
     }
 }

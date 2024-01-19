@@ -1,0 +1,193 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = View
+build_property.RootNamespace = View
+build_property.ProjectDir = C:\Users\Rearms\Desktop\Rekhta\View\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Rearms\Desktop\Rekhta\View
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/EditorPanel/UsersCRUD/AddUserByAdmins.razor]
+build_metadata.AdditionalFiles.TargetPath = RWRpdG9yUGFuZWxcVXNlcnNDUlVEXEFkZFVzZXJCeUFkbWlucy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/EditorPanel/UsersCRUD/UsersData.razor]
+build_metadata.AdditionalFiles.TargetPath = RWRpdG9yUGFuZWxcVXNlcnNDUlVEXFVzZXJzRGF0YS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/ContentCRUD/PostContentMainPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGVudENSVURcUG9zdENvbnRlbnRNYWluUGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/ContentCRUD/PostGhazal.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGVudENSVURcUG9zdEdoYXphbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/ContentCRUD/PostNazam.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGVudENSVURcUG9zdE5hemFtLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/ContentCRUD/PostPhrases.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGVudENSVURcUG9zdFBocmFzZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/GhazalDisplagePage/RenderGhazal.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2hhemFsRGlzcGxhZ2VQYWdlXFJlbmRlckdoYXphbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/GhazalSearchPage/GhazalSearchMainPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2hhemFsU2VhcmNoUGFnZVxHaGF6YWxTZWFyY2hNYWluUGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/HomePage/HomePage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZVBhZ2VcSG9tZVBhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/HomePage/PoetOfTheDay.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZVBhZ2VcUG9ldE9mVGhlRGF5LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/MainPagesCustomLayout/CustomUserLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFpblBhZ2VzQ3VzdG9tTGF5b3V0XEN1c3RvbVVzZXJMYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/PhrasePage/PhrasePageMain.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGhyYXNlUGFnZVxQaHJhc2VQYWdlTWFpbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/PoemDisplayPage/RenderNazam.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9lbURpc3BsYXlQYWdlXFJlbmRlck5hemFtLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/PoemsSearchPage/PoemSearchMainPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9lbXNTZWFyY2hQYWdlXFBvZW1TZWFyY2hNYWluUGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/PoetsAndUsersPublicProfile/ProfileAboutComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9ldHNBbmRVc2Vyc1B1YmxpY1Byb2ZpbGVcUHJvZmlsZUFib3V0Q29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/PoetsAndUsersPublicProfile/ProfileGhazalsComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9ldHNBbmRVc2Vyc1B1YmxpY1Byb2ZpbGVcUHJvZmlsZUdoYXphbHNDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/PoetsAndUsersPublicProfile/ProfileHeaderComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9ldHNBbmRVc2Vyc1B1YmxpY1Byb2ZpbGVcUHJvZmlsZUhlYWRlckNvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/PoetsAndUsersPublicProfile/ProfilePageMain.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9ldHNBbmRVc2Vyc1B1YmxpY1Byb2ZpbGVcUHJvZmlsZVBhZ2VNYWluLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/PoetsAndUsersPublicProfile/ProfilePoemsComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9ldHNBbmRVc2Vyc1B1YmxpY1Byb2ZpbGVcUHJvZmlsZVBvZW1zQ29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/PoetsPrivateProfileCRUD/UpdatePoetProfile.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9ldHNQcml2YXRlUHJvZmlsZUNSVURcVXBkYXRlUG9ldFByb2ZpbGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/PoetsSearchPage/PoetsCard.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9ldHNTZWFyY2hQYWdlXFBvZXRzQ2FyZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/PoetsSearchPage/PoetSearchMainPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9ldHNTZWFyY2hQYWdlXFBvZXRTZWFyY2hNYWluUGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/PoetsSearchPage/ShowAllPoets.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9ldHNTZWFyY2hQYWdlXFNob3dBbGxQb2V0cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/PoetsSearchPage/ShowFemalePoets.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9ldHNTZWFyY2hQYWdlXFNob3dGZW1hbGVQb2V0cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/PoetsSearchPage/ShowMalePoets.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9ldHNTZWFyY2hQYWdlXFNob3dNYWxlUG9ldHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/Reusable/DisplayContent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmV1c2FibGVcRGlzcGxheUNvbnRlbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/Reusable/FileUpload.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmV1c2FibGVcRmlsZVVwbG9hZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/Reusable/GhazalNazamSearchCard.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmV1c2FibGVcR2hhemFsTmF6YW1TZWFyY2hDYXJkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/Reusable/ListRender.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmV1c2FibGVcTGlzdFJlbmRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/Reusable/PhraseRenderer.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmV1c2FibGVcUGhyYXNlUmVuZGVyZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/SubComponents/GhazalNazamSearch.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3ViQ29tcG9uZW50c1xHaGF6YWxOYXphbVNlYXJjaC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/SubComponents/Navbar.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3ViQ29tcG9uZW50c1xOYXZiYXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/UserAuthLoginSignup/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlckF1dGhMb2dpblNpZ251cFxMb2dpbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/UserAuthLoginSignup/SignupUsers.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlckF1dGhMb2dpblNpZ251cFxTaWdudXBVc2Vycy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/UserLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlckxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/WordDictionaryCRUD/WordDictionary.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV29yZERpY3Rpb25hcnlDUlVEXFdvcmREaWN0aW9uYXJ5LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-0gsfdbd658
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-lyks8ctlqz
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rearms/Desktop/Rekhta/View/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 

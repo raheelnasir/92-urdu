@@ -7,13 +7,23 @@
             <div class="col-md-12 d-flex justify-content-center align-items-center" style="min-height:50vh">
                 <div>
                     <article class="pb-5 urdu ">آج کے منتخب 1 شعر</article>
-                   
+                    @if (PoetPoetry.Verse1 != "" && PoetPoetry.Verse2 != ""  )
+                    {
                         <PhraseRenderer Misra1="@PoetPoetry.Verse1" Misra2="@PoetPoetry.Verse2" />
 
                         <div>
                             <p class="urdu">@PoetPoetry.Fullname</p>
                         </div>
                     
+                    }
+                    else
+                    {
+                        <div class="spinner-grow spinner-grow-sm" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+
+                    }
+
                 </div>
             </div>
         </div>

@@ -180,6 +180,7 @@ namespace WebAPI.Controllers
         [Route("updateuserprofileinformation")]
         public async Task<string> UpdateProfileInformation(EntUserProfile eup)
         {
+            
             if (eup != null)
             {
                 SqlParameter[] sp = new SqlParameter[]
@@ -196,7 +197,7 @@ namespace WebAPI.Controllers
                     new SqlParameter("@email",eup.EmailAddress.ToString()),
                     new SqlParameter("@password",eup.Password.ToString()),
                     new SqlParameter("@userbio",eup.UserBio.ToString()),
-                   new SqlParameter("@gender",eup.Gender.ToString()),
+                    new SqlParameter("@gender",eup.Gender.ToString()),
 
 
                 };

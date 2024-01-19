@@ -8,7 +8,7 @@ namespace View.Data
         public IDeleteUsersProfile(HttpClient _http)
         {
             http = _http;
-
+            http.BaseAddress = DomainHelper.GetDomain();
 
         }
         public async Task DeleteUsersProfileData(EntUserProfile ent)

@@ -1,70 +1,86 @@
 ﻿@inject AuthenticationStateProvider auth;
 @inject NavigationManager navManager;
 @using System.Security.Claims;
-@using View.Authentication;
 
 <head>
     <link rel="stylesheet" href="./css/Navbar.css" />
 </head>
 
 
-<nav class="navbar navbar-expand-lg bg-light shadow-sm">
+<nav class="navbar navbar-expand-lg bg-light shadow-sm p-0">
+
     <div class="container">
-        <a class="navbar-brand fw-bolder" href="#">ریختہ</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="oi oi-menu "></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <div class="d-flex align-items-center p-0">
+
+            <button class="navbar-toggler  p-2 m-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu m-0 "></span>
+            </button>
+            <a class="navbar-brand m-0 fw-bolder urdu" href="#"><img class="p-0 m-0" src="/92.png" width="50px" /></a>
+
+        </div>
+
+        <div class="collapse navbar-collapse p-0" id="navbarSupportedContent" dir="rtl">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 p-0" dir="rtl">
                 <li class="nav-item">
-                    <a class="nav-link active urdu" aria-current="page" href="searchpoets">شاعر</a>
+                    <a class="nav-link active urdu " aria-current="page" href="searchpoets">شاعر</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link urdu" href="searchpoems">نظم</a>
                 </li>
-             
+
                 <li class="nav-item">
                     <a class="nav-link urdu" href="searchghazals">غزل</a>
-                </li> 
+                </li>
                 <li class="nav-item">
-                    <a class="nav-link urdu" href="phrases" >شعر</a>
+                    <a class="nav-link urdu" href="phrases">شعر</a>
                 </li>
             </ul>
 
- 
+
 
             <div class="d-flex">
 
                 <AuthorizeView Roles="Poet">
                     <Authorized>
                         <div class="btn-group">
-                            <button type="button" class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Actions
-                            </button>
+
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="postcontent">Post Content</a>
                                 <a class="dropdown-item" href="updateuserprofile">Update Profile</a>
                             </div>
+                            <button type="button" class="btn btn-success btn-sm m-1 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Menu
+                            </button>
                         </div>
                     </Authorized>
-                   
+
+                </AuthorizeView>
+                <AuthorizeView Roles="Administrator, Editor, Cheif Editor">
+                    <Authorized>
+                        <a href="admin" class="btn btn-success  btn-sm m-1 " id="navbar-auth-button">
+                            Admin
+                        </a>
+
+                    </Authorized>
+
                 </AuthorizeView>
 
-                <AuthorizeView Roles="User, Poet">
+                <AuthorizeView Roles="User, Poet, Editor, Cheif Editor, Administrator">
                     <Authorized>
-                        <button  onclick="@Logout" class="btn btn-primary btn-sm" id="navbar-auth-button">
+                        <button onclick="@Logout" class="btn btn-primary btn-sm m-1" id="navbar-auth-button">
                             Logout
 
                         </button>
                     </Authorized>
                     <NotAuthorized>
-                        <a href="login" class="btn btn-primary btn-sm" id="navbar-auth-button" >
+                        <a href="login" class="btn btn-primary btn-sm m-1 " id="navbar-auth-button">
                             Login
                         </a>
                     </NotAuthorized>
                 </AuthorizeView>
 
             </div>
+
 
 
         </div>

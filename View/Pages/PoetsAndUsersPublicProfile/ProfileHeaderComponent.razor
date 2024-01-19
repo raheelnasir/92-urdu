@@ -1,11 +1,10 @@
 ﻿<div class="d-flex flex-row w-100 justify-content-center  " style=" background-image: url('img/profilebackground.jpg'); background-color: rgba(0, 0, 0, 0.5);   background-size: cover;   background-position: center;  background-repeat: no-repeat;height:50vh;">
 
-    <div style="border-radius:50%; overflow:hidden;max-width:200px;  box-shadow:1px 1px 15px 1px whitesmoke; margin-right:3px;" class="mt-auto mb-auto">
-        @if (UserAbout.ProfileImage != "")
-        {
-            <img src="@UserAbout.ProfileImage" width="100%" alt="profile image" />
+    <div class="mt-auto mb-auto">
 
-        }
+        <div style="height:150px; width:150px; background-image:url('@(UserAbout.ProfileImage?? "img/placeholder.png")'); background-position:center; background-size:cover; border-radius:100%;margin:0 auto"> </div>
+
+        
     </div>
 
     <div class="d-flex flex-column m-3 mt-auto mb-auto" style="color:white;">

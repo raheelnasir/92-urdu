@@ -4,23 +4,33 @@
 @using Microsoft.IdentityModel.Tokens;
 @using System.Diagnostics.Eventing.Reader;
 @using System.Security.Claims;
+@layout CustomUserLayout;
 <PageTitle>Index</PageTitle>
 
 
 <AuthorizeView>
     <Authorized>
-        <h1>Hello, @context.User.Identity.Name!</h1>
+        <h1>Hello, @context.User.Identity.Name</h1>
+        <div>
+            <a href="addusersbyadmins" class=" m-5 btn btn-success">
+                Add Users
+            </a>
+            <a href="usersdata" class=" m-5 btn btn-primary">
+                View Users Details
+            </a>
+
+        </div>
     </Authorized>
     <NotAuthorized>
         <h1>Hello, Guest</h1>
     </NotAuthorized>
 </AuthorizeView>
 
-<ScrollPage/>
 <SurveyPrompt Title="How is Blazor working for you?" />
 
 @code{
     string UserName = "sad";
+
     protected override async Task OnInitializedAsync()
     {
         var auth = await asp.GetAuthenticationStateAsync();

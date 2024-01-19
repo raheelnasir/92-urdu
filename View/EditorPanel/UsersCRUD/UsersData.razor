@@ -1,0 +1,286 @@
+﻿@page "/usersdata"
+@inject IGetUsersData iup
+@inject AuthenticationStateProvider aspas
+@inject IUpdateUsersProfileDataStatus iupd
+@attribute [Authorize(Roles = "Administrator,Editor,Chief Editor")]
+@inject IDeleteUsersProfile iudp
+@layout CustomUserLayout
+<div style="overflow:hidden; " class="p-2" dir="rtl">
+
+    <h3 class="text-center">Users Data</h3>
+
+    <AuthorizeView>
+        <Authorized>
+
+            <div class="card-deck justify-content-center  flex-wrap d-flex">
+                @if (data != null)
+                {
+                    @foreach (var userProfile in data)
+                    {
+                        <div class="card m-1 shadow" style="flex:0.2 0 300px;">
+                            <div class="card-body justify-content-end flex-column">
+                                <p class="card-text d-flex flex-column float-right w-100" dir="rtl">
+                                <p class="d-flex " dir="ltr">
+                                    <strong class="urdu"> :Type </strong>
+
+                                        @if (userProfile == editingUser)
+                                        {
+                                        <select class="form-control" @bind="editingUser.Role">
+                                            <option value="User">User</option>
+                                            <option value="Poet">Poet</option>
+                                            <option value="Editor">Editor</option>
+                                        </select>
+                                        }
+                                        else
+                                        {
+                                    <p class="urdu">
+                                                @userProfile.Role
+                                    </p>
+                                        }
+
+                                </p>
+
+                                <div class="flex-column d-flex">
+                                    <div class="float-end d-flex " style="gap:5px;">
+                                        <strong>پہلا نام:</strong>
+                                        <p>@userProfile.FirstName</p>
+                                    </div>
+                                    <div class="float-end d-flex " style="gap:5px;">
+                                        <strong class="urdu">آخری نام:</strong>
+                                        <p class="urdu">@userProfile.LastName</p>
+                                    </div>
+                                    <!-- Email -->
+                                        @if (!string.IsNullOrEmpty(userProfile.EmailAddress))
+                                        {
+                                        <div class="d-flex" style="gap:5px;">
+                                            <strong class="urdu">ای میل </strong>
+                                            <p class="urdu">@userProfile.EmailAddress</p>
+                                        </div>
+                                        }
+                                        else
+                                        {
+                                        <div class="d-flex" style="gap:5px;">
+                                            <strong class="urdu">ای میل </strong>
+                                            <p class="urdu">نا مکمل</p>
+                                        </div>
+                                        }
+
+                                    <!-- Phone Number -->
+                                        @if (!string.IsNullOrEmpty(userProfile.PhoneNumber))
+                                        {
+                                        <div class="d-flex" style="gap:5px;">
+                                            <strong class="urdu">فون نمبر:</strong>
+                                            <p class="urdu">@userProfile.PhoneNumber</p>
+                                        </div>
+                                        }
+                                        else
+                                        {
+                                        <div class="d-flex" style="gap:5px;">
+                                            <strong class="urdu">فون نمبر:</strong>
+                                            <p class="urdu">نا مکمل</p>
+                                        </div>
+                                        }
+
+                                    <!-- City -->
+                                        @if (!string.IsNullOrEmpty(userProfile.City))
+                                        {
+                                        <div class="float-end d-flex" style="gap:5px;">
+                                            <strong class="urdu">شہر:</strong>
+                                            <p class="urdu">@userProfile.City</p>
+                                        </div>
+                                        }
+                                        else
+                                        {
+                                        <div class="float-end d-flex" style="gap:5px;">
+                                            <strong class="urdu">شہر:</strong>
+                                            <p class="urdu">نا مکمل</p>
+                                        </div>
+                                        }
+
+                                    <div class="float-end d-flex " style="gap:5px;">
+                                        <strong>Active:</strong>
+                                            @if (userProfile == editingUser)
+                                            {
+                                            <select class="form-control" @bind="editingUser.IsActive">
+                                                <option value="true">ٹھیک ہے</option>
+                                                <option value="false">غیر فعال ہے</option>
+                                            </select>
+                                            }
+                                            else
+                                            {
+                                            <p>@userProfile.IsActive</p>
+                                            }
+                                    </div>
+                                        @if (userProfile == editingUser)
+                                        {
+                                        <select class="form-control" @bind="editingUser.IsActive">
+                                            <option value="true">true</option>
+                                            <option value="false">false</option>
+                                        </select>
+                                        }
+
+                                </div>
+                                </p>
+                                <div>
+                                    @if (userProfile == editingUser)
+                                    {
+                                        <button class="btn btn-danger p-1 align-items-center" @onclick="CancelEdit">
+                                            <span class="oi oi-delete" style="" />Delete
+                                        </button>
+                                        <button class="btn btn-info p-1 align-items-center" @onclick="UpdateUser">
+                                            <span class="oi oi-pencil" /> Edit
+                                        </button>
+
+                                    }
+                                    else
+                                    {
+                                        <button class="btn btn-danger p-1 align-items-center" @onclick="() => DeleteUser(userProfile.UId)">
+                                            <span class="oi oi-delete m-1" style="" />Delete
+                                        </button>
+                                        <button class="btn btn-info p-1 align-items-center" @onclick="() => EditUser(userProfile)">
+                                            <span class="oi oi-pencil" style="" /> Edit
+                                        </button>
+
+                                    }
+                                </div>
+                                <p class="card-title h6 "> Username : @userProfile.UserName <br/> Password: @userProfile.Password.ToString() </p>
+
+                            </div>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <div class="text-center" style="margin-top: 40vh;">
+                        <div class="spinner-border" role="status">
+                            <span class="visually-hidden">ڈیٹا لوڈ ہو رہا ہے...</span>
+                        </div>
+                        <p>لوڈ ہو رہا ہے</p>
+                    </div>
+                }
+            </div>
+
+        </Authorized>
+        <NotAuthorized>
+            <h1>اجازت نہیں ہے</h1>
+        </NotAuthorized>
+    </AuthorizeView>
+</div>
+
+
+
+
+<!-- Modal for Editing User -->
+@if (editingUser != null)
+{
+    <div class="modal fade show" style="display: block;" id="editUserModal" tabindex="-1" role="dialog" aria-labelledby="editUserModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editUserModalLabel">Edit User</h5>
+                    <button type="button" class="close" @onclick="CancelEdit">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="editUserName">User Name</label>
+                        <input type="text" class="form-control" id="editUserName" @bind="editingUser.UserName" disabled />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="editIsActive">Is Active</label>
+                        <select class="form-control" id="editIsActive" @onchange="ToggleIsActive">
+                            <option value="true" selected="@editingUser.IsActive">True</option>
+                            <option value="false" selected="@(!editingUser.IsActive)">False</option>
+                        </select>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label for="editRole">Role</label>
+                        <select class="form-control" id="editRole" @bind="editingUser.Role">
+                            <option value="User">User</option>
+                            <option value="Editor">Editor</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" @onclick="CancelEdit">Close</button>
+                    <button type="button" class="btn btn-primary" @onclick="UpdateUser">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    public List<EntUserProfile>? data = null;
+    private EntUserProfile? editingUser; // Store the user being edited
+
+    public string? userName { get; set; }
+    private string? userRole { get; set; }
+    EntUserProfile updateEnt = new EntUserProfile();
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await aspas.GetAuthenticationStateAsync();
+        userName = authState.User.FindFirst(ClaimTypes.Name)?.Value;
+        Console.WriteLine(authState);
+        // Access the user's role from claims
+        userRole = authState.User.FindFirst(ClaimTypes.Role)?.Value;
+        data = await iup.GetUsersData(userRole);
+    }
+
+    public void EditUser(EntUserProfile user)
+    {
+        editingUser = new EntUserProfile
+            {
+                UId = user.UId,
+                UserName = user.UserName,
+                Role = user.Role,
+                IsActive = user.IsActive
+            };
+    }
+    private void ToggleIsActive(ChangeEventArgs e)
+    {
+        Console.WriteLine(e.Value);
+        if (e.Value.ToString() == "true")
+        {
+            editingUser.IsActive = true;
+        }
+        else
+        {
+            editingUser.IsActive = false;
+
+
+        }
+    }
+
+
+    public void UpdateUser()
+    {
+
+        Console.WriteLine(editingUser.Role);
+        Console.WriteLine(editingUser.IsActive);
+        iupd.UpdateUsersProfileData(editingUser);
+        editingUser = null;
+    }
+
+    public void CancelEdit()
+    {
+        // Cancel the editing process and close the modal
+        editingUser = null;
+    }
+
+    private async void DeleteUser(int userId)
+    {
+        EntUserProfile ent = new EntUserProfile();
+        ent.UId = userId;
+        ent.Role = userRole;
+
+        await iudp.DeleteUsersProfileData(ent);
+        Console.WriteLine(ent);
+    }
+}

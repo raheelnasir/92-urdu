@@ -27,7 +27,14 @@
                 <div class="row">
                     @foreach (var poet in Poets)
                     {
-                        <PoetsCard ImageUrl="img/profile.png" City="@poet.City" FullName="@poet.FullName" UId="@poet.UId.ToString()" />
+                      
+                            <PoetsCard ImageUrl="@poet.ProfileImage"
+                                       City="@poet.City"
+                                       FullName="@poet.FullName"
+                                       UId="@poet.UId.ToString()" />
+                        
+                  
+
 
                     }
                 </div>
@@ -58,7 +65,8 @@
     protected override async Task OnInitializedAsync()
     {
         IsSearching = true;
-        Poets = await DAL.DALPoetsSearch.GetPoetsBySearch("", null);
+        Poets = await DAL.DALPoetsSearch.GetPoetsBySearch(null, null);
+       
         IsSearching = false;
     }
 }

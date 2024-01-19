@@ -1,17 +1,11 @@
 ﻿using Entities;
-using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Reflection.Metadata;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace DAL
 {
     public class DALUserAuth
     {
-
         public static async Task<UserAccount> Authenticate(string username, string password)
         {
             UserAccount userProfile = new UserAccount();
@@ -31,20 +25,17 @@ namespace DAL
                             {
                                 userProfile.UserName = sdr["UserName"].ToString();
                                 userProfile.Role = sdr["Role"].ToString();
-                                userProfile.UId = sdr["UId"].ToString(); // Adjust data type as needed
+                                userProfile.UId = sdr["UId"].ToString();
                             }
                         }
                     }
                     await con.CloseAsync();
                 }
                 Console.WriteLine($"Inter: {userProfile}");
-
             }
             catch (Exception ex)
             {
-                // Log the exception for further analysis
                 Console.WriteLine($"Error: {ex.Message}");
-                // Consider more sophisticated error handling/logging here
             }
             return userProfile;
         }

@@ -20,15 +20,15 @@
                     <div class="input-group mb-2">
                     <button @onclick="() => RemoveInputValue(inputValue)" type="button" class="btn btn-outline-danger">X</button>
 
-                    <input type="text" placeholder="Misra 1" class="form-control" @bind="inputValue.Value1" />
-                    <input type="text" placeholder="Misra 2" class="form-control" @bind="inputValue.Value2" />
+                    <input type="name" placeholder="Misra 1" class="form-control" @bind="inputValue.Value1" />
+                    <input type="name" placeholder="Misra 2" class="form-control" @bind="inputValue.Value2" />
                 </div>
             }
         </div>
         <div >
-            <button @onclick="AddInputValue" class="btn btn-outline-success">Add</button>
+            <button @onclick="AddInputValue" class="btn btn-outline-success">Add Misra </button>
 
-            <button @onclick="PostSher" class="btn btn-success">Post Nazam</button>
+            <button @onclick="PostSher" class="btn btn-success">Post Ghazal</button>
         </div>
     </div>
 </div>
@@ -58,7 +58,6 @@
 
     public async Task PostSher()
     {
-        AddInputValue();
         try
         {
             Random rand = new Random();

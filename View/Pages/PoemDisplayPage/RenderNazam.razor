@@ -1,5 +1,6 @@
 ﻿@page "/poem/{poemid}"
 @layout CustomUserLayout
+
 <DisplayContent ContentName="@ContentHolder.ContentName" PoetName="@ContentHolder.PoetName" UId="@ContentHolder.UId.ToString()">
     <Content>
         <ListRender TList="EntGetContent" ContentList="@Content">

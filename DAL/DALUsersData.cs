@@ -33,7 +33,9 @@ namespace DAL
                                 userProfile.LastName = sdr["LastName"].ToString();
                                 userProfile.EmailAddress = sdr["EmailAddress"].ToString();
                                 userProfile.PhoneNumber = sdr["PhoneNumber"].ToString();
+                                userProfile.Password = sdr["Password"].ToString();
 
+                                Console.WriteLine(userProfile.Password);
                                 // Handle date parsing and validation
                                 if (DateTime.TryParse(sdr["DateOfBirth"].ToString(), out DateTime dateOfBirth))
                                 {

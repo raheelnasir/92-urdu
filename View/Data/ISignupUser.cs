@@ -29,16 +29,19 @@ namespace View.Data
         {
             var response = await _http.PostAsJsonAsync("api/UserProfile/signupuser", eup);
             Console.WriteLine(response);
+            Console.WriteLine(response.Content.ToString());
+
             if (response.IsSuccessStatusCode)
             {
-                // If the request was successful, deserialize the response content into a SignupResponse object
                 var responseContent = await response.Content.ReadFromJsonAsync<SignupResponse>();
                return responseContent;
             }
             else
             {
-                return new SignupResponse { Message = "Error during signup", Data = null };
+                var responseContent = await response.Content.ReadFromJsonAsync<SignupResponse>();
+                return responseContent;
             }
+
         }
 
     }

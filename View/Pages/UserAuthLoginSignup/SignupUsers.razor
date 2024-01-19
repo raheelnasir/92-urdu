@@ -34,13 +34,18 @@
 
         <p style="color:red">@outputMessage</p>
         <div class="mb-3 d-grid gap-2">
-            <button @onclick="SignupUser" class="btn btn-primary">Sign Up</button>
-            <a href="/login">Already have an account? Login here.</a>
+            <button @onclick="SignupUser" style=' display:@(displayer2);' class="btn btn-primary">Signup</button>
+            <button class="btn btn-primary" style=' display:@(displayer);' type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Processing...
+            </button>  <a href="/login">Already have an account? Login here.</a>
         </div>
     </div>
 </div>
 
 @code {
+    public string? displayer = "none";
+    public string? displayer2 = "block";
     string outputMessage = "";
     Entities.EntUserProfile model = new Entities.EntUserProfile();
 
@@ -48,6 +53,9 @@
     {
         try
         {
+            displayer = "block";
+            displayer2 = "none";
+
             // Check if all required fields are filled
             if (string.IsNullOrEmpty(model.UserName) ||
                 string.IsNullOrEmpty(model.Password) ||
@@ -56,6 +64,9 @@
                 string.IsNullOrEmpty(model.EmailAddress))
             {
                 outputMessage = "Please fill in all the required fields.";
+                await Task.Delay(1500);
+                displayer = "none";
+                displayer2 = "block";
                 return;
             }
 
@@ -78,17 +89,27 @@
                 // Navigate to the login page only if the response is successful
                 nav.NavigateTo("/login", true);
             }
+            else if(response.Message=="User registered successfully")
+            {
+                nav.NavigateTo("/login", true);
+
+            }
             else
             {
                 // Handle unsuccessful response scenarios
-                outputMessage = $"Sign Up Failed: {response.Message}";
+                outputMessage = $"{response.Message}";
             }
+            await Task.Delay(1500);
+            displayer = "none";
+            displayer2 = "block";
         }
         catch (Exception ex)
         {
             // Log the exception
-            Console.WriteLine($"Error during signup: {ex.Message}");
-            outputMessage = $"Sign Up Failed: {ex.Message}";
+            await Task.Delay(1500);
+            displayer = "none";
+            displayer2 = "block";
+            outputMessage = $"Sign Up Failed Catch: {ex.Message}";
         }
     }
 

@@ -104,6 +104,7 @@
         pgp.Role = authState.User.FindFirst(ClaimTypes.Role)?.Value;
         pgp.PId = Convert.ToInt32(authState.User.FindFirst("UId")?.Value);
         ent = await DALPoetProfile.GetPoetData(pgp);
+        Console.WriteLine($"{ent.UserName}");
     }
 
     // Method to save the profile changes

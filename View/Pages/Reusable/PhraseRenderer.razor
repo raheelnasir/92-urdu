@@ -1,58 +1,57 @@
-﻿<div class="row m-auto">
-    <div class="mb-4 d-flex flex-column justify-content-center ">
-        <div class="d-flex">
+﻿<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="mb-0 mt-0 d-flex flex-column">
 
-            @foreach (var word in (Misra1 ?? string.Empty).ToString().Split(' '))
-            {
-                <div class="m-2 mt-0 mb-1 urdu h3">
-                    <button type="button" @onclick="()=>GetMeaning(word)" class="urdu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        @word 
-                    </button>
-                    <div class="dropdown-menu mt-1 small">
-
-                        <a class="dropdown-item urdu" data-toggle="popover" title="@word" data-content="@Meaning">
-                            @Meaning
-                        </a>
+            <div class="d-flex justify-content-center">
+                @foreach (var word in (Misra1 ?? string.Empty).ToString().Split(' '))
+                {
+                    <div class="m-2 mt-0 mb-0 urdu">
+                        <button type="button" @onclick="()=>GetMeaning(word)" class="urdu h4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            @word
+                        </button>
+                        <div class="dropdown-menu mt-1 small">
+                            <a class="dropdown-item urdu" data-toggle="popover" title="@word" data-content="@Meaning">
+                                @Meaning
+                            </a>
+                        </div>
                     </div>
-                </div>
-            }
-            
+                }
+            </div>
 
-        </div>
-        <div class="d-flex">
-
-            @foreach (var word2 in (Misra2 ?? string.Empty).ToString().Split(' '))
-            {
-                <div class="m-2 mt-0 mb-1  urdu h3">
-                    <button type="button" @onclick="()=>GetMeaning(word2)" class="urdu " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        @word2 
-                    </button>
-                    <div class="dropdown-menu m-1">
-
-                        <a class="dropdown-item urdu" @onclick="()=>GetMeaning(word2)" data-toggle="popover" title="@word2" data-content="@Meaning">
-                            @Meaning
-                        </a>
+            <div class="d-flex justify-content-center">
+                @foreach (var word2 in (Misra2 ?? string.Empty).ToString().Split(' '))
+                {
+                    <div class="m-2 mb-0 mt-0 urdu">
+                        <button type="button" @onclick="()=>GetMeaning(word2)" class="urdu h4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            @word2
+                        </button>
+                        <div class="dropdown-menu m-1">
+                            <a class="dropdown-item urdu" @onclick="()=>GetMeaning(word2)" data-toggle="popover" title="@word2" data-content="@Meaning">
+                                @Meaning
+                            </a>
+                        </div>
                     </div>
-                </div>
-            }
-
+                }
+            </div>
 
         </div>
     </div>
 </div>
 
 
-@code {
+    @code {
     [Parameter] public string? Misra1 { get; set; }
     [Parameter] public string? Misra2 { get; set; }
     public string? Meaning { get; set; }
+    public string? Meanings { get; set; }
 
     public async Task GetMeaning(string word)
     {
         Meaning = await DALWordDictionary.GetWordMeaning(word);
+        Meanings = word;
         if (string.IsNullOrEmpty(Meaning))
         {
-            Meaning = "Meaning Not Found";
+            Meaning = word;
         }
     }
 }

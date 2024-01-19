@@ -1,17 +1,13 @@
-﻿
-<div class="d-flex flex-column card m-auto " style="width:max-content">
-    <div class="card-body">
-        @Content
-
+﻿<div class="container mt-5">
+    <div class=" mx-auto" style="max-width: 600px;">
+        <div class="card-body">
+            @Content
+        </div>
+        <div class=" text-center">
+            <h6 class="urdu">@ContentName</h6>
+            <a class="urdu h6" href="userprofile/@UId">@PoetName</a>
+        </div>
     </div>
-
-    <div class="card-footer text-center">
-        <h6 class="urdu ">@ContentName</h6>
-
-        <a class="urdu h6" href="userprofile/@UId">@PoetName</a>
-    </div>
-    
-
 </div>
 
 @code {

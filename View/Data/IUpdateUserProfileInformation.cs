@@ -1,4 +1,5 @@
 ﻿using Entities;
+using System.Net;
 
 namespace View.Data
 {
@@ -17,7 +18,12 @@ namespace View.Data
             {
                 var response = await http.PutAsJsonAsync("api/UserProfile/updateuserprofileinformation", ent);
 
-                if (response.IsSuccessStatusCode)
+                if (response.StatusCode == HttpStatusCode.MethodNotAllowed)
+                {
+                    Console.WriteLine($"Error: {response.StatusCode} - Method Not Allowed");
+                    return "Method Not Allowed. Check server configuration.";
+                }
+                else if (response.IsSuccessStatusCode)
                 {
                     var message = await response.Content.ReadAsStringAsync();
                     Console.WriteLine(message); // Print the message to the console
@@ -35,5 +41,6 @@ namespace View.Data
                 return "An Error Occurred. Please try again later.";
             }
         }
+
     }
 }

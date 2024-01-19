@@ -25,7 +25,10 @@
             <div class="row">
                 @foreach (var poet in Poets)
                 {
-                    <PoetsCard ImageUrl="img/profile.png" City="@poet.City" FullName="@poet.FullName" UId="@poet.UId.ToString()" />
+                    <PoetsCard ImageUrl='@(poet.ProfileImage ?? "img/placeholder.png")'
+                               City="@poet.City"
+                               FullName="@poet.FullName"
+                               UId="@poet.UId.ToString()" />
 
                 }
             </div>

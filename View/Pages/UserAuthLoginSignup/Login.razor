@@ -1,10 +1,9 @@
 ﻿@page "/login"
-@using View.Authentication
 @inject UserAccountService userAccountService
 @inject IJSRuntime js
 @inject AuthenticationStateProvider authstateprovider
 @inject NavigationManager nav
-@layout View.Pages.MainPagesCustomLayout.CustomUserLayout
+@layout CustomUserLayout
 
 
 <div class="row w-100 d-flex flex-row justify-content-center h-100" dir="ltr">
@@ -12,20 +11,26 @@
         <div class="mb-3 text-center">
             <h3>LOGIN</h3>
         </div>
-        <div class="mb-3">
-            <label>User Name</label>
-            <input @bind="model.UserName" class="form-control" placeholder="User Name" />
+        <div class="mb-3 form-floating">
+            <input @bind="model.UserName" class="form-control" id="userName" placeholder="User Name" />
+            <label for="userName">User Name</label>
         </div>
-        <div class="mb-3">
-            <label>Password</label>
-            <input @bind="model.Password" type="password" class="form-control" placeholder="Password" />
+
+        <div class="mb-3 form-floating">
+            <input @bind="model.Password" type="password" class="form-control" id="password" placeholder="Password" />
+            <label for="password">Password</label>
         </div>
+
         <p class="mb-3 text-danger">
             @Message
 
         </p>
         <div class="mb-3 d-grid gap-2">
-            <button @onclick="Authenticate" class="btn btn-primary">Login</button>
+            <button @onclick="Authenticate" style=' display:@(displayer2);' class="btn btn-primary">Login</button>
+            <button class="btn btn-primary" style=' display:@(displayer);' type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Processing...
+            </button>
             <button @onclick="Move" class="btn btn-success">Register Now</button>
 
         </div>
@@ -35,6 +40,8 @@
 
 @code {
     public string Message { get; set; }
+    public string? displayer = "none";
+    public string? displayer2 = "block";
 
     public void Move()
     {
@@ -47,16 +54,26 @@
     }
     public Model model = new Model();
 
+
+
     public async Task Authenticate()
     {
+        displayer = "block";
+        displayer2 = "none";
+
         var userAccount = await userAccountService.GetByUserName(model.UserName, model.Password);
 
         if (userAccount.UserName == null || userAccount.Role == null)
         {
             Message = "Invalid Username or Password";
+            await Task.Delay(2500);
+            displayer = "none";
+            displayer2 = "block";
             return;
         };
         var customÄuthStateProvider = (CustomAuthenticationStateProvider)authstateprovider;
+        await Task.Delay(3500);
+
         await customÄuthStateProvider.UpdateAuthenticationState(new UserSession
             {
                 UserName = userAccount.UserName,
