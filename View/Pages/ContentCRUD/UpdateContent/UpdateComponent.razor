@@ -1,0 +1,38 @@
+﻿@inject NavigationManager nav;
+
+<div class="d-flex flex-column" style="">
+    @foreach (var obj in AllDetail)
+    {
+        <div class="shadow d-flex flex-column" style="max-width: 300px; padding-bottom: 10px">
+            <h6 class="m-auto" style="padding-bottom: 10px"> @obj.ContentName</h6>
+            <div class="mb-auto d-grid gap-2">
+                <button @onclick="()=>OpenGhazalForUpdate(obj.CId)" class="btn btn-primary m-auto">Update</button>
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter] public int UId { get; set; }
+    [Parameter] public string? FuntionCall { get; set; }
+    List<Entities.EntUserContent> AllDetail = new List<Entities.EntUserContent>();
+
+
+    protected async override Task OnInitializedAsync()
+    {
+        if (FuntionCall == "Ghazal")
+        {
+            AllDetail = await DAL.DALUserGhazalByUId.GetUserGhazalByUId(Convert.ToInt32(UId));
+        }
+        else if (FuntionCall == "Nazam")
+        {
+            AllDetail = await DAL.DALUserPoemByUId.GetUserPoemByUId(Convert.ToInt32(UId));
+        }
+
+    }
+
+    public void OpenGhazalForUpdate(int cid)
+    {
+        nav.NavigateTo($"updatenazamghazal/{cid}/{FuntionCall}", true);
+    }
+}

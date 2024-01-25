@@ -1,155 +1,283 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Rearms\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.bundle.js",
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\Rearms\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.bundle.js.map",
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\Rearms\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\Rearms\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.bundle.min.js.map",
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Rearms\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.esm.js",
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\Rearms\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.esm.js.map",
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\Rearms\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.esm.min.js",
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\Rearms\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.esm.min.js.map",
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Rearms\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.js",
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\Rearms\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.js.map",
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\Rearms\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.min.js",
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\Rearms\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.min.js.map",
+      "Id": "C:\\Users\\abdul\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Rearms\\Desktop\\Rekhta\\View\\obj\\Release\\net7.0\\scopedcss\\projectbundle\\View.bundle.scp.css",
+      "Id": "E:\\Rekhta\\rekhta\\View\\obj\\Release\\net7.0\\scopedcss\\projectbundle\\View.bundle.scp.css",
       "PackagePath": "staticwebassets\\View.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\Rearms\\Desktop\\Rekhta\\View\\wwwroot\\92.png",
+      "Id": "E:\\Rekhta\\rekhta\\View\\wwwroot\\92.png",
       "PackagePath": "staticwebassets\\92.png"
     },
     {
-      "Id": "C:\\Users\\Rearms\\Desktop\\Rekhta\\View\\wwwroot\\ProfileImages\\allamaiqbal653368165db0f5-8963-49bb-91a0-73d56a724257.jpg",
+      "Id": "E:\\Rekhta\\rekhta\\View\\wwwroot\\ProfileImages\\allamaiqbal653368165db0f5-8963-49bb-91a0-73d56a724257.jpg",
       "PackagePath": "staticwebassets\\ProfileImages\\allamaiqbal653368165db0f5-8963-49bb-91a0-73d56a724257.jpg"
     },
     {
-      "Id": "C:\\Users\\Rearms\\Desktop\\Rekhta\\View\\wwwroot\\ProfileImages\\allamaiqbal653368716deed2-1095-4720-bd34-932c90e3b750.png",
+      "Id": "E:\\Rekhta\\rekhta\\View\\wwwroot\\ProfileImages\\allamaiqbal653368716deed2-1095-4720-bd34-932c90e3b750.png",
       "PackagePath": "staticwebassets\\ProfileImages\\allamaiqbal653368716deed2-1095-4720-bd34-932c90e3b750.png"
     },
     {
-      "Id": "C:\\Users\\Rearms\\Desktop\\Rekhta\\View\\wwwroot\\ProfileImages\\allamaiqbal653368915e559e-0b77-400b-a75a-b85fe5d72ed7.jpg",
+      "Id": "E:\\Rekhta\\rekhta\\View\\wwwroot\\ProfileImages\\allamaiqbal653368915e559e-0b77-400b-a75a-b85fe5d72ed7.jpg",
       "PackagePath": "staticwebassets\\ProfileImages\\allamaiqbal653368915e559e-0b77-400b-a75a-b85fe5d72ed7.jpg"
     },
     {
-      "Id": "C:\\Users\\Rearms\\Desktop\\Rekhta\\View\\wwwroot\\ProfileImages\\allamaiqbal653368c0d6ab20-0956-4174-9dd8-364d916ce7a3.png",
+      "Id": "E:\\Rekhta\\rekhta\\View\\wwwroot\\ProfileImages\\allamaiqbal653368c0d6ab20-0956-4174-9dd8-364d916ce7a3.png",
       "PackagePath": "staticwebassets\\ProfileImages\\allamaiqbal653368c0d6ab20-0956-4174-9dd8-364d916ce7a3.png"
     },
     {
-      "Id": "C:\\Users\\Rearms\\Desktop\\Rekhta\\View\\wwwroot\\ProfileImages\\allamaiqbal653368c4d608df-9157-4a9f-a490-7b43e350b738.png",
+      "Id": "E:\\Rekhta\\rekhta\\View\\wwwroot\\ProfileImages\\allamaiqbal653368c4d608df-9157-4a9f-a490-7b43e350b738.png",
       "PackagePath": "staticwebassets\\ProfileImages\\allamaiqbal653368c4d608df-9157-4a9f-a490-7b43e350b738.png"
     },
     {
-      "Id": "C:\\Users\\Rearms\\Desktop\\Rekhta\\View\\wwwroot\\ProfileImages\\allamaiqbal653368f60e410f-d73e-4a5d-8b63-276c39917a1c.jpg",
+      "Id": "E:\\Rekhta\\rekhta\\View\\wwwroot\\ProfileImages\\allamaiqbal653368f60e410f-d73e-4a5d-8b63-276c39917a1c.jpg",
       "PackagePath": "staticwebassets\\ProfileImages\\allamaiqbal653368f60e410f-d73e-4a5d-8b63-276c39917a1c.jpg"
     },
     {
-      "Id": "C:\\Users\\Rearms\\Desktop\\Rekhta\\View\\wwwroot\\css\\Navbar.css",
+      "Id": "E:\\Rekhta\\rekhta\\View\\wwwroot\\css\\Navbar.css",
       "PackagePath": "staticwebassets\\css\\Navbar.css"
     },
     {
-      "Id": "C:\\Users\\Rearms\\Desktop\\Rekhta\\View\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Id": "E:\\Rekhta\\rekhta\\View\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\Rearms\\Desktop\\Rekhta\\View\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Id": "E:\\Rekhta\\rekhta\\View\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Rearms\\Desktop\\Rekhta\\View\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Id": "E:\\Rekhta\\rekhta\\View\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "PackagePath": "staticwebassets\\css\\open-iconic"
     },
     {
-      "Id": "C:\\Users\\Rearms\\Desktop\\Rekhta\\View\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Id": "E:\\Rekhta\\rekhta\\View\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "PackagePath": "staticwebassets\\css\\open-iconic"
     },
     {
-      "Id": "C:\\Users\\Rearms\\Desktop\\Rekhta\\View\\wwwroot\\css\\open-iconic\\README.md",
+      "Id": "E:\\Rekhta\\rekhta\\View\\wwwroot\\css\\open-iconic\\README.md",
       "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
     },
     {
-      "Id": "C:\\Users\\Rearms\\Desktop\\Rekhta\\View\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Id": "E:\\Rekhta\\rekhta\\View\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\Rearms\\Desktop\\Rekhta\\View\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Id": "E:\\Rekhta\\rekhta\\View\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Id": "C:\\Users\\Rearms\\Desktop\\Rekhta\\View\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Id": "E:\\Rekhta\\rekhta\\View\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Id": "C:\\Users\\Rearms\\Desktop\\Rekhta\\View\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Id": "E:\\Rekhta\\rekhta\\View\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Id": "C:\\Users\\Rearms\\Desktop\\Rekhta\\View\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Id": "E:\\Rekhta\\rekhta\\View\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Id": "C:\\Users\\Rearms\\Desktop\\Rekhta\\View\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Id": "E:\\Rekhta\\rekhta\\View\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Id": "C:\\Users\\Rearms\\Desktop\\Rekhta\\View\\wwwroot\\css\\site.css",
+      "Id": "E:\\Rekhta\\rekhta\\View\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\Rearms\\Desktop\\Rekhta\\View\\wwwroot\\favicon.png",
+      "Id": "E:\\Rekhta\\rekhta\\View\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
-      "Id": "C:\\Users\\Rearms\\Desktop\\Rekhta\\View\\wwwroot\\img\\placeholder.png",
+      "Id": "E:\\Rekhta\\rekhta\\View\\wwwroot\\img\\placeholder.png",
       "PackagePath": "staticwebassets\\img\\placeholder.png"
     },
     {
-      "Id": "C:\\Users\\Rearms\\Desktop\\Rekhta\\View\\wwwroot\\img\\profile.png",
+      "Id": "E:\\Rekhta\\rekhta\\View\\wwwroot\\img\\profile.png",
       "PackagePath": "staticwebassets\\img\\profile.png"
     },
     {
-      "Id": "C:\\Users\\Rearms\\Desktop\\Rekhta\\View\\wwwroot\\img\\profilebackground.jpg",
+      "Id": "E:\\Rekhta\\rekhta\\View\\wwwroot\\img\\profilebackground.jpg",
       "PackagePath": "staticwebassets\\img\\profilebackground.jpg"
     },
     {
-      "Id": "C:\\Users\\Rearms\\Desktop\\Rekhta\\View\\wwwroot\\jqueryInterop.js",
+      "Id": "E:\\Rekhta\\rekhta\\View\\wwwroot\\jqueryInterop.js",
       "PackagePath": "staticwebassets\\jqueryInterop.js"
     },
     {

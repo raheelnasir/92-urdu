@@ -9,3 +9,14 @@ C:\Users\Rearms\Desktop\Rekhta\Entities\obj\Release\net7.0\Entities.dll
 C:\Users\Rearms\Desktop\Rekhta\Entities\obj\Release\net7.0\refint\Entities.dll
 C:\Users\Rearms\Desktop\Rekhta\Entities\obj\Release\net7.0\Entities.pdb
 C:\Users\Rearms\Desktop\Rekhta\Entities\obj\Release\net7.0\ref\Entities.dll
+E:\Rekhta\rekhta\Entities\bin\Release\net7.0\Entities.deps.json
+E:\Rekhta\rekhta\Entities\bin\Release\net7.0\Entities.dll
+E:\Rekhta\rekhta\Entities\bin\Release\net7.0\Entities.pdb
+E:\Rekhta\rekhta\Entities\obj\Release\net7.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+E:\Rekhta\rekhta\Entities\obj\Release\net7.0\Entities.AssemblyInfoInputs.cache
+E:\Rekhta\rekhta\Entities\obj\Release\net7.0\Entities.AssemblyInfo.cs
+E:\Rekhta\rekhta\Entities\obj\Release\net7.0\Entities.csproj.CoreCompileInputs.cache
+E:\Rekhta\rekhta\Entities\obj\Release\net7.0\Entities.dll
+E:\Rekhta\rekhta\Entities\obj\Release\net7.0\refint\Entities.dll
+E:\Rekhta\rekhta\Entities\obj\Release\net7.0\Entities.pdb
+E:\Rekhta\rekhta\Entities\obj\Release\net7.0\ref\Entities.dll

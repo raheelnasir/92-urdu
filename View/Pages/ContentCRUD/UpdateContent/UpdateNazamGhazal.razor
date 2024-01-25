@@ -1,0 +1,83 @@
+﻿@page "/updatenazamghazal/{CId}/{FunctionType}"
+@using System.Data.SqlClient;
+@layout CustomUserLayout;
+
+<div class="row">
+    <div class="col-lg-8 offset-2">
+        <div class="mb-3">
+
+        </div>
+        <div>
+            @foreach (var verse in FullList)
+            {
+                <div class="input-group mb-2">
+                    <button @onclick="() => RemoveValue(verse)" type="button" class="btn btn-outline-danger">X</button>
+
+                    <input type="name" placeholder="Misra 1" class="form-control" @bind="verse.Verse1" />
+                    <input type="name" placeholder="Misra 2" class="form-control" @bind="verse.Verse2" />
+                </div>
+            }
+        </div>
+        <div>
+            <button @onclick="AddValue" class="btn btn-outline-success">Add Misra </button>
+            <button @onclick="Update" class="btn btn-success">Update</button>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter] public string? CId { get; set; }
+    [Parameter] public string? FunctionType { get; set; }
+    List<Entities.EntGetContent> FullList = new List<Entities.EntGetContent>();
+    int OriginalLength;
+    protected override async Task OnInitializedAsync()
+    {
+        FullList = await DAL.DALGetForUpdateNazamGhazal.GetContentForpdate(CId, FunctionType);
+        OriginalLength = FullList.Count;
+    }
+    private void AddValue()
+    {
+        Entities.EntGetContent AddNew = new Entities.EntGetContent();
+        AddNew.Verse1 = "";
+        AddNew.Verse2 = "";
+
+        FullList.Add(AddNew);
+    }
+    private void RemoveValue(EntGetContent verse)
+    {
+        FullList.Remove(verse);
+        Console.WriteLine(FullList.Count);
+    }
+
+    public async void Update()
+    {
+        DAL.DALDeleteNazamGhazal.Delete(CId, FunctionType);
+        if (FunctionType == "Ghazal")
+        {
+            foreach(EntGetContent Verse in FullList)
+            {
+                SqlParameter[] sp = new SqlParameter[]
+                {
+                    new SqlParameter("@ghazalid", CId),
+                    new SqlParameter("@verse1", Verse.Verse1),
+                    new SqlParameter("@verse2", Verse.Verse2)
+                };
+                await MyCrud.CRUD("SP_PostGhazalVerses", sp);
+            }
+        }
+        else if (FunctionType == "Nazam")
+        {
+            foreach (EntGetContent Verse in FullList)
+            {
+                SqlParameter[] sp = new SqlParameter[]
+                {
+                    new SqlParameter("@nazamid", CId),
+                    new SqlParameter("@verse1", Verse.Verse1),
+                    new SqlParameter("@verse2", Verse.Verse2)
+                };
+                await MyCrud.CRUD("SP_PostNazamVerses", sp);
+            }     
+        }
+        Console.WriteLine("Updated");
+    }
+}

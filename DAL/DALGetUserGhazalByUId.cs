@@ -1,10 +1,5 @@
 ﻿using Entities;
-using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAL
 {
@@ -14,8 +9,6 @@ namespace DAL
         {
             try
             {
-                Console.WriteLine("2");
-
                 List<Entities.EntUserContent> GhazalDetail = new List<Entities.EntUserContent>();
 
 
@@ -32,8 +25,8 @@ namespace DAL
                             {
                                 EntUserContent EUC = new EntUserContent();
 
-                                EUC.CId = Convert.ToInt32(rdr["ContentId"]);
-                                EUC.ContentName = rdr["ContentName"].ToString();
+                                EUC.CId = Convert.ToInt32(rdr["GhazalId"]);
+                                EUC.ContentName = rdr["GhazalName"].ToString();
                                 GhazalDetail.Add(EUC);
                             }
                         }
@@ -41,8 +34,7 @@ namespace DAL
                     }
                     await con.CloseAsync();
                 }
-                Console.WriteLine("2");
-
+                
                 return GhazalDetail;
             }
             catch (Exception ex)

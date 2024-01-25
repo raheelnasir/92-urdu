@@ -1,10 +1,5 @@
 ﻿using Entities;
-using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAL
 {
@@ -14,7 +9,6 @@ namespace DAL
         {
             try
             {
-                Console.WriteLine("2");
 
                 List<Entities.EntUserContent> PoemDetail = new List<Entities.EntUserContent>();
 
@@ -41,8 +35,6 @@ namespace DAL
                     }
                     await con.CloseAsync();
                 }
-                Console.WriteLine("2");
-
                 return PoemDetail;
             }
             catch (Exception ex)
