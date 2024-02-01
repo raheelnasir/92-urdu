@@ -5,7 +5,9 @@
 <div class="row">
     <div class="col-lg-8 offset-2">
         <div class="mb-3">
-
+            <h6>
+                @euc.ContentName
+            </h6> 
         </div>
         <div>
             @foreach (var verse in FullList)
@@ -30,10 +32,23 @@
     [Parameter] public string? FunctionType { get; set; }
     List<Entities.EntGetContent> FullList = new List<Entities.EntGetContent>();
     int OriginalLength;
+    EntContentDetails euc = new();
+
     protected override async Task OnInitializedAsync()
     {
         FullList = await DAL.DALGetForUpdateNazamGhazal.GetContentForpdate(CId, FunctionType);
         OriginalLength = FullList.Count;
+        if (FunctionType == "Ghazal")
+        {
+            euc = await DAL.DALGetPoetAndGhazalNameByGhazalId.GetGhazalAndPoetNameByGhazalId(CId);
+
+        }
+        else if (FunctionType == "Nazam")
+        {
+            euc = await DAL.DALGetPoetAndPoemNameByNazamId.GetNazamAndPoetNameByNazamId(CId);
+
+        }
+
     }
     private void AddValue()
     {

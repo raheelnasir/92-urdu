@@ -4,7 +4,11 @@
 @layout CustomUserLayout
 <PageTitle>View</PageTitle>
 
-<div class="page">
+
+
+
+@Body
+@* <div class="page">
     <div class="sidebar">
        
     </div>
@@ -20,19 +24,19 @@
         </article>
     </main>
 </div>
-
+ *@
 
 @code {
-    bool _drawerOpen = true;
+    // bool _drawerOpen = true;
 
-    void DrawerToggle()
-    {
-        _drawerOpen = !_drawerOpen;
-    }
-    private async Task Logout()
-    {
-        var customAuthStateProvider = (CustomAuthenticationStateProvider)authStateProvider;
-        await customAuthStateProvider.UpdateAuthenticationState(null);
-        navManager.NavigateTo("/", true);
-    }
+    // void DrawerToggle()
+    // {
+    //     _drawerOpen = !_drawerOpen;
+    // }
+    // private async Task Logout()
+    // {
+    //     var customAuthStateProvider = (CustomAuthenticationStateProvider)authStateProvider;
+    //     await customAuthStateProvider.UpdateAuthenticationState(null);
+    //     navManager.NavigateTo("/", true);
+    // }
 }

@@ -1649,19 +1649,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\abdul\\.nuget\\packages\\": {}
+    "C:\\Users\\Rearms\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Rekhta\\rekhta\\View\\View.csproj",
+      "projectUniqueName": "C:\\Users\\Rearms\\Desktop\\Rekhta\\View\\View.csproj",
       "projectName": "View",
-      "projectPath": "E:\\Rekhta\\rekhta\\View\\View.csproj",
-      "packagesPath": "C:\\Users\\abdul\\.nuget\\packages\\",
-      "outputPath": "E:\\Rekhta\\rekhta\\View\\obj\\",
+      "projectPath": "C:\\Users\\Rearms\\Desktop\\Rekhta\\View\\View.csproj",
+      "packagesPath": "C:\\Users\\Rearms\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Rearms\\Desktop\\Rekhta\\View\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\abdul\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Rearms\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1675,11 +1675,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "E:\\Rekhta\\rekhta\\DAL\\DAL.csproj": {
-              "projectPath": "E:\\Rekhta\\rekhta\\DAL\\DAL.csproj"
+            "C:\\Users\\Rearms\\Desktop\\Rekhta\\DAL\\DAL.csproj": {
+              "projectPath": "C:\\Users\\Rearms\\Desktop\\Rekhta\\DAL\\DAL.csproj"
             },
-            "E:\\Rekhta\\rekhta\\Entities\\Entities.csproj": {
-              "projectPath": "E:\\Rekhta\\rekhta\\Entities\\Entities.csproj"
+            "C:\\Users\\Rearms\\Desktop\\Rekhta\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\Rearms\\Desktop\\Rekhta\\Entities\\Entities.csproj"
             }
           }
         }

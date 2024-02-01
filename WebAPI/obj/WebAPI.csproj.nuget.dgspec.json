@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Rekhta\\rekhta\\WebAPI\\WebAPI.csproj": {}
+    "C:\\Users\\Rearms\\Desktop\\Rekhta\\WebAPI\\WebAPI.csproj": {}
   },
   "projects": {
-    "E:\\Rekhta\\rekhta\\DAL\\DAL.csproj": {
+    "C:\\Users\\Rearms\\Desktop\\Rekhta\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Rekhta\\rekhta\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\Rearms\\Desktop\\Rekhta\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "E:\\Rekhta\\rekhta\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\abdul\\.nuget\\packages\\",
-        "outputPath": "E:\\Rekhta\\rekhta\\DAL\\obj\\",
+        "projectPath": "C:\\Users\\Rearms\\Desktop\\Rekhta\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\Rearms\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Rearms\\Desktop\\Rekhta\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\abdul\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Rearms\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "E:\\Rekhta\\rekhta\\Entities\\Entities.csproj": {
-                "projectPath": "E:\\Rekhta\\rekhta\\Entities\\Entities.csproj"
+              "C:\\Users\\Rearms\\Desktop\\Rekhta\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Rearms\\Desktop\\Rekhta\\Entities\\Entities.csproj"
               }
             }
           }
@@ -69,17 +69,17 @@
         }
       }
     },
-    "E:\\Rekhta\\rekhta\\Entities\\Entities.csproj": {
+    "C:\\Users\\Rearms\\Desktop\\Rekhta\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Rekhta\\rekhta\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\Rearms\\Desktop\\Rekhta\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "E:\\Rekhta\\rekhta\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\abdul\\.nuget\\packages\\",
-        "outputPath": "E:\\Rekhta\\rekhta\\Entities\\obj\\",
+        "projectPath": "C:\\Users\\Rearms\\Desktop\\Rekhta\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\Rearms\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Rearms\\Desktop\\Rekhta\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\abdul\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Rearms\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -124,17 +124,17 @@
         }
       }
     },
-    "E:\\Rekhta\\rekhta\\WebAPI\\WebAPI.csproj": {
+    "C:\\Users\\Rearms\\Desktop\\Rekhta\\WebAPI\\WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Rekhta\\rekhta\\WebAPI\\WebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Rearms\\Desktop\\Rekhta\\WebAPI\\WebAPI.csproj",
         "projectName": "WebAPI",
-        "projectPath": "E:\\Rekhta\\rekhta\\WebAPI\\WebAPI.csproj",
-        "packagesPath": "C:\\Users\\abdul\\.nuget\\packages\\",
-        "outputPath": "E:\\Rekhta\\rekhta\\WebAPI\\obj\\",
+        "projectPath": "C:\\Users\\Rearms\\Desktop\\Rekhta\\WebAPI\\WebAPI.csproj",
+        "packagesPath": "C:\\Users\\Rearms\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Rearms\\Desktop\\Rekhta\\WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\abdul\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Rearms\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -148,11 +148,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "E:\\Rekhta\\rekhta\\DAL\\DAL.csproj": {
-                "projectPath": "E:\\Rekhta\\rekhta\\DAL\\DAL.csproj"
+              "C:\\Users\\Rearms\\Desktop\\Rekhta\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\Rearms\\Desktop\\Rekhta\\DAL\\DAL.csproj"
               },
-              "E:\\Rekhta\\rekhta\\Entities\\Entities.csproj": {
-                "projectPath": "E:\\Rekhta\\rekhta\\Entities\\Entities.csproj"
+              "C:\\Users\\Rearms\\Desktop\\Rekhta\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Rearms\\Desktop\\Rekhta\\Entities\\Entities.csproj"
               }
             }
           }

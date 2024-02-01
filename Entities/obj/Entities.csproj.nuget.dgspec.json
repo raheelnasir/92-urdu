@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Rekhta\\rekhta\\Entities\\Entities.csproj": {}
+    "C:\\Users\\Rearms\\Desktop\\Rekhta\\Entities\\Entities.csproj": {}
   },
   "projects": {
-    "E:\\Rekhta\\rekhta\\Entities\\Entities.csproj": {
+    "C:\\Users\\Rearms\\Desktop\\Rekhta\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Rekhta\\rekhta\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\Rearms\\Desktop\\Rekhta\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "E:\\Rekhta\\rekhta\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\abdul\\.nuget\\packages\\",
-        "outputPath": "E:\\Rekhta\\rekhta\\Entities\\obj\\",
+        "projectPath": "C:\\Users\\Rearms\\Desktop\\Rekhta\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\Rearms\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Rearms\\Desktop\\Rekhta\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\abdul\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Rearms\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
