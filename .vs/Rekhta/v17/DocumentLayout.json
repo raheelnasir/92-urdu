@@ -1,0 +1,73 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Rearms\\Desktop\\Rekhta\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DD350B96-029D-4E55-8ABB-B1AC87EFE8A7}|DAL\\DAL.csproj|c:\\users\\rearms\\desktop\\rekhta\\dal\\dbhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD350B96-029D-4E55-8ABB-B1AC87EFE8A7}|DAL\\DAL.csproj|solutionrelative:dal\\dbhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFC4E709-E13B-40E5-BB35-BD4B9B7D8C40}|View\\View.csproj|c:\\users\\rearms\\desktop\\rekhta\\view\\pages\\reusable\\phraserenderer.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AFC4E709-E13B-40E5-BB35-BD4B9B7D8C40}|View\\View.csproj|solutionrelative:view\\pages\\reusable\\phraserenderer.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFC4E709-E13B-40E5-BB35-BD4B9B7D8C40}|View\\View.csproj|c:\\users\\rearms\\desktop\\rekhta\\view\\pages\\homepage\\poetoftheday.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AFC4E709-E13B-40E5-BB35-BD4B9B7D8C40}|View\\View.csproj|solutionrelative:view\\pages\\homepage\\poetoftheday.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DBHelper.cs",
+              "DocumentMoniker": "C:\\Users\\Rearms\\Desktop\\Rekhta\\DAL\\DBHelper.cs",
+              "RelativeDocumentMoniker": "DAL\\DBHelper.cs",
+              "ToolTip": "C:\\Users\\Rearms\\Desktop\\Rekhta\\DAL\\DBHelper.cs",
+              "RelativeToolTip": "DAL\\DBHelper.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-05T14:30:00.494Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PhraseRenderer.razor",
+              "DocumentMoniker": "C:\\Users\\Rearms\\Desktop\\Rekhta\\View\\Pages\\Reusable\\PhraseRenderer.razor",
+              "RelativeDocumentMoniker": "View\\Pages\\Reusable\\PhraseRenderer.razor",
+              "ToolTip": "C:\\Users\\Rearms\\Desktop\\Rekhta\\View\\Pages\\Reusable\\PhraseRenderer.razor",
+              "RelativeToolTip": "View\\Pages\\Reusable\\PhraseRenderer.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-15T08:33:49.219Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PoetOfTheDay.razor",
+              "DocumentMoniker": "C:\\Users\\Rearms\\Desktop\\Rekhta\\View\\Pages\\HomePage\\PoetOfTheDay.razor",
+              "RelativeDocumentMoniker": "View\\Pages\\HomePage\\PoetOfTheDay.razor",
+              "ToolTip": "C:\\Users\\Rearms\\Desktop\\Rekhta\\View\\Pages\\HomePage\\PoetOfTheDay.razor",
+              "RelativeToolTip": "View\\Pages\\HomePage\\PoetOfTheDay.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-15T08:33:07.445Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
