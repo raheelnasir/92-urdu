@@ -12,9 +12,7 @@ namespace DAL
 
         public static SqlConnection GetConnection()
         {
-            // SqlConnection connection = new SqlConnection("Data Source=REARMS\\SQLEXPRESS;Initial Catalog=Project;Integrated Security=True");
-
-            SqlConnection connection = new SqlConnection("Data Source=66.165.248.146;Initial Catalog=db_urdu;User ID=un_92urdu;Password=Mk0*5yl47"); 
+            SqlConnection connection = new SqlConnection("Data Source=REARMS\\SQLEXPRESS;Initial Catalog=Project;Integrated Security=True");
             return connection;
         }
 
